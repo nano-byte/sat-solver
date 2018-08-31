@@ -1,0 +1,20 @@
+PROJECT_NAME = "NanoByte SAT Solver"
+
+INPUT = . ../src
+USE_MDFILE_AS_MAINPAGE = main.md
+STRIP_FROM_PATH = ../src
+RECURSIVE = YES
+EXCLUDE_PATTERNS = */UnitTests/* */Properties/* */obj/* */bin/*
+
+OUTPUT_DIRECTORY = ../artifacts/Documentation
+GENERATE_TAGFILE = ../artifacts/Documentation/nanobyte-sat-solver.tag
+HTML_OUTPUT = .
+
+GENERATE_LATEX = NO
+CASE_SENSE_NAMES = NO
+
+EXTRACT_PACKAGE = YES
+EXTRACT_STATIC = YES
+AUTOLINK_SUPPORT = NO
+WARN_IF_UNDOCUMENTED = NO
+QUIET = YES
