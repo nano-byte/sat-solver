@@ -55,7 +55,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='net20'">
-    <PackageReference Include="NanoByte.Common" Version="2.3.3" />
+    <PackageReference Include="NanoByte.Common" Version="2.3.4" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(MSBuildRuntimeType)'=='Full'">
