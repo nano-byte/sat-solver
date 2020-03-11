@@ -11,7 +11,7 @@ namespace NanoByte.SatSolver
     /// A Boolean Literal.
     /// </summary>
     /// <typeparam name="T">The underlying type used to identify/compare Literals.</typeparam>
-    public struct Literal<T> : IEquatable<Literal<T>>
+    public readonly struct Literal<T> : IEquatable<Literal<T>>
         where T : IEquatable<T>
     {
         /// <summary>
