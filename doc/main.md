@@ -34,6 +34,4 @@ bool result = solver.IsSatisfiable(formula);
 
 When the Solver needs to choose a Literal to assign a truth value to during backtracking, it simply picks the first unset Literal from the list. You can replace this with your own domain-specific logic for better performance by deriving from \ref NanoByte.SatSolver.Solver "Solver<T>" and overriding the \ref NanoByte.SatSolver.Solver.ChooseLiteral "ChooseLiteral()" method.
 
-## Building and contributing
-
-See the [GitHub project](https://github.com/nano-byte/sat-solver) for more information.
+[**GitHub repository**](https://github.com/nano-byte/sat-solver)

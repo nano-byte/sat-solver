@@ -1,4 +1,5 @@
 PROJECT_NAME = "NanoByte SAT Solver"
+PROJECT_BRIEF = "DPLL Boolean Satisfiability Solver for .NET"
 
 INPUT = . ../src
 USE_MDFILE_AS_MAINPAGE = main.md
