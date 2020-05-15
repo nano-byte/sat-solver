@@ -41,12 +41,9 @@ When the Solver needs to choose a Literal to assign a truth value to during back
 
 ## Building
 
-The source code is in [`src/`](src/), a project for API documentation is in [`doc/`](doc/) and generated build artifacts are placed in `artifacts/`.
+The source code is in [`src/`](src/), config for building the API documentation is in [`doc/`](doc/) and generated build artifacts are placed in `artifacts/`. The source code does not contain version numbers. Instead the version is determined during CI using [GitVersion](http://gitversion.readthedocs.io/).
 
-You need [Visual Studio 2019](https://www.visualstudio.com/downloads/) to perform a full build of this project.  
-You can build for .NET Standard on Linux using just the [.NET Core SDK 3.1+](https://www.microsoft.com/net/download). Additionally installing [Mono 6.4+](https://www.mono-project.com/download/stable/) allows you to also build for .NET Framework. The build scripts will automatically adjust accordingly.
-
-Run `.\build.ps1` on Windows or `./build.sh` on Linux. These scripts take a version number as an input argument. The source code itself contains only contains dummy version numbers. The actual version is picked by continuous integration using [GitVersion](http://gitversion.readthedocs.io/).
+To build [.NET Core SDK 3.1 or newer](https://www.microsoft.com/net/download) and run `.\build.ps1` or `./build.sh`.
 
 ## Contributing
 
