@@ -2,7 +2,8 @@
 $ErrorActionPreference = "Stop"
 pushd $PSScriptRoot
 
-dotnet msbuild -v:Quiet -t:Restore -t:Build -p:Configuration=Release -p:Version=$Version
+if ($env:CI) { $ci = "-p:ContinuousIntegrationBuild=True" }
+dotnet msbuild -v:Quiet -t:Restore -t:Build $ci -p:Configuration=Release -p:Version=$Version
 if ($LASTEXITCODE -ne 0) {throw "Exit Code: $LASTEXITCODE"}
 
 popd
