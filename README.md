@@ -1,8 +1,8 @@
 # NanoByte SAT Solver
 
+[![Build](https://github.com/nano-byte/sat-solver/workflows/Build/badge.svg?branch=master)](https://github.com/nano-byte/sat-solver/actions?query=workflow%3ABuild)
 [![NuGet](https://img.shields.io/nuget/v/NanoByte.SatSolver.svg)](https://www.nuget.org/packages/NanoByte.SatSolver/)
-[![API documentation](https://img.shields.io/badge/api-docs-orange.svg)](https://sat-solver.nano-byte.net/)
-[![Build status](https://img.shields.io/appveyor/ci/nano-byte/sat-solver.svg)](https://ci.appveyor.com/project/nano-byte/sat-solver)  
+[![API documentation](https://img.shields.io/badge/api-docs-orange.svg)](https://sat-solver.nano-byte.net/)  
 NanoByte SAT Solver is a DPLL Boolean Satisfiability Solver for .NET.
 
 ## Usage
