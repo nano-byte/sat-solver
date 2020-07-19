@@ -8,6 +8,11 @@
       "groupName": "Testing deps",
       "automerge": true,
       "automergeType": "branch"
+    },
+    {
+      "packagePatterns": ["SourceLink"],
+      "automerge": true,
+      "automergeType": "branch"
     }
   ]
 }
