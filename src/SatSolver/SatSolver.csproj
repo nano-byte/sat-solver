@@ -40,7 +40,7 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='net20'">
-    <PackageReference Include="NanoByte.Common" Version="2.4.1" />
+    <PackageReference Include="NanoByte.Common" Version="2.4.2" />
   </ItemGroup>
 
 </Project>
