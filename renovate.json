@@ -8,12 +8,6 @@
       "groupName": "Testing deps",
       "automerge": true,
       "automergeType": "branch"
-    },
-    {
-      "packagePatterns": ["^NanoByte\\.Common"],
-      "groupName": "NanoByte.Common",
-      "automerge": true,
-      "automergeType": "branch"
     }
   ]
 }

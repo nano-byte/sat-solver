@@ -5,7 +5,7 @@
     <AssemblyName>NanoByte.SatSolver</AssemblyName>
     <RootNamespace>NanoByte.SatSolver</RootNamespace>
     <LangVersion>8.0</LangVersion>
-    <TargetFrameworks>net20;net45;net461;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net40;net45;net461;netstandard2.0;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
@@ -38,9 +38,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net20'">
-    <PackageReference Include="NanoByte.Common" Version="2.4.2" />
   </ItemGroup>
 
 </Project>
