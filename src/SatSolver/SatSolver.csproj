@@ -31,6 +31,7 @@
     <Copyright>Copyright Bastian Eicher</Copyright>
     <PackageProjectUrl>https://sat-solver.nano-byte.net/</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>SAT;Boolean Satisfiability;Solver;DPLL</PackageTags>
     <RepositoryUrl>https://github.com/nano-byte/sat-solver</RepositoryUrl>
   </PropertyGroup>
 
