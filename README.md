@@ -7,7 +7,7 @@ NanoByte SAT Solver is a DPLL Boolean Satisfiability Solver for .NET.
 
 ## Usage
 
-Add a reference to the [NanoByte.SatSolver](https://www.nuget.org/packages/NanoByte.SatSolver/) NuGet package to your project. It is available for .NET Framework 2.0+ and .NET Standard 1.0+.
+Add a reference to the [`NanoByte.SatSolver`](https://www.nuget.org/packages/NanoByte.SatSolver/) NuGet package to your project.
 
 You need to choose the underlying type to use for Literals in Boolean Formulas. This will often be `int` or `string` but you can also use any other type that implements the `IEquatable<T>` interface. You can then create an instance of `Solver<T>`:
 
