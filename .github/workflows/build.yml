@@ -26,6 +26,11 @@ jobs:
       - name: Build (release)
         if: steps.gitversion.outputs.preReleaseLabel == ''
         run: ./build.sh ${{steps.gitversion.outputs.nuGetVersion}}
+      - name: Report test results
+        uses: scacap/action-surefire-report@v1
+        with:
+          github_token: ${{github.token}}
+          report_paths: '**/TestResults/TestResults.xml'
 
       # Release
       - name: Create GitHub Release
