@@ -1,5 +1,7 @@
 NanoByte SAT Solver is a DPLL Boolean Satisfiability Solver for .NET.
 
+[**GitHub repository**](https://github.com/nano-byte/sat-solver)
+
 ## Usage
 
 Add a reference to the [NanoByte.SatSolver](https://www.nuget.org/packages/NanoByte.SatSolver/) NuGet package to your project. It is available for .NET Framework 2.0+ and .NET Standard 1.0+.
@@ -33,5 +35,3 @@ bool result = solver.IsSatisfiable(formula);
 ```
 
 When the Solver needs to choose a Literal to assign a truth value to during backtracking, it simply picks the first unset Literal from the list. You can replace this with your own domain-specific logic for better performance by deriving from \ref NanoByte.SatSolver.Solver "Solver<T>" and overriding the \ref NanoByte.SatSolver.Solver.ChooseLiteral "ChooseLiteral()" method.
-
-[**GitHub repository**](https://github.com/nano-byte/sat-solver)
