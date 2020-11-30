@@ -71,7 +71,7 @@ namespace NanoByte.SatSolver
         public override string ToString()
             => "(" + string.Join("|", this.Select(literal => literal.ToString()).ToArray()) + ")";
 
-        public bool Equals(Clause<T> other)
+        public bool Equals(Clause<T>? other)
             => other != null && Count == other.Count && other.All(Contains);
 
         public override bool Equals(object obj)
@@ -83,7 +83,7 @@ namespace NanoByte.SatSolver
             {
                 int result = 397;
                 foreach (var literal in this)
-                    result = result ^ literal.GetHashCode();
+                    result ^= literal.GetHashCode();
                 return result;
             }
         }
