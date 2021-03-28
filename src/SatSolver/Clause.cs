@@ -78,15 +78,7 @@ namespace NanoByte.SatSolver
             => obj is Clause<T> other && Equals(other);
 
         public override int GetHashCode()
-        {
-            unchecked
-            {
-                int result = 397;
-                foreach (var literal in this)
-                    result ^= literal.GetHashCode();
-                return result;
-            }
-        }
+            => this.Aggregate(397, (current, literal) => current ^ literal.GetHashCode());
     }
 
     /// <summary>

@@ -116,21 +116,13 @@ namespace NanoByte.SatSolver
         public override string ToString()
             => string.Join(" & ", this.Select(clause => clause.ToString()).ToArray());
 
-        public bool Equals(Formula<T> other)
+        public bool Equals(Formula<T>? other)
             => other != null && Count == other.Count && other.All(Contains);
 
         public override bool Equals(object obj)
             => obj is Formula<T> other && Equals(other);
 
         public override int GetHashCode()
-        {
-            unchecked
-            {
-                int result = 397;
-                foreach (var clause in this)
-                    result = result ^ clause.GetHashCode();
-                return result;
-            }
-        }
+            => this.Aggregate(397, (current, clause) => current ^ clause.GetHashCode());
     }
 }
