@@ -1,44 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- Build config -->
+  <!-- Project properties -->
   <PropertyGroup>
     <AssemblyName>NanoByte.SatSolver</AssemblyName>
-    <RootNamespace>NanoByte.SatSolver</RootNamespace>
-    <LangVersion>9.0</LangVersion>
-    <TargetFrameworks>net40;net45;net461;netstandard2.0;netstandard2.1</TargetFrameworks>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <NoWarn>$(NoWarn);1591</NoWarn>
-    <Nullable>annotations</Nullable>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <RunCodeAnalysis>False</RunCodeAnalysis>
-    <CodeAnalysisRuleSet>..\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+    <Description>DPLL Boolean Satisfiability Solver</Description>
+    <PackageTags>SAT;Boolean Satisfiability;Solver;DPLL</PackageTags>
     <OutputPath>..\..\artifacts\$(Configuration)\</OutputPath>
-    <OutputType>Library</OutputType>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\sgKey.snk</AssemblyOriginatorKeyFile>
-    <IncludeSymbols>True</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <TargetFrameworks>net40;net45;net472;netstandard2.0;netstandard2.1</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup Condition="$(TargetFramework)=='netstandard2.1'">
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <!-- NuGet package metadata -->
-  <PropertyGroup>
-    <Description>DPLL Boolean Satisfiability Solver</Description>
-    <Authors>Bastian Eicher</Authors>
-    <Copyright>Copyright Bastian Eicher</Copyright>
-    <PackageProjectUrl>https://sat-solver.nano-byte.net/</PackageProjectUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>SAT;Boolean Satisfiability;Solver;DPLL</PackageTags>
-    <RepositoryUrl>https://github.com/nano-byte/sat-solver</RepositoryUrl>
-  </PropertyGroup>
-
-  <!-- Dependencies -->
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
 
 </Project>
