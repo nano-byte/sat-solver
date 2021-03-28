@@ -34,7 +34,7 @@ namespace NanoByte.SatSolver
         /// <param name="formula">The existing Formula.</param>
         /// <param name="clause">The additional Clause.</param>
         public static Formula<T> operator &(Formula<T> formula, Clause<T> clause)
-            => new Formula<T>(formula) {clause};
+            => new(formula) {clause};
 
         /// <summary>
         /// Creates a <see cref="Formula{T}"/> consisting of all Clauses from an existing Formula plus an additional <see cref="Clause{T}"/>.
@@ -42,7 +42,7 @@ namespace NanoByte.SatSolver
         /// <param name="clause">The additional Clause.</param>
         /// <param name="formula">The existing Formula.</param>
         public static Formula<T> operator &(Clause<T> clause, Formula<T> formula)
-            => new Formula<T>(formula) {clause};
+            => new(formula) {clause};
 
         /// <summary>
         /// Indicates whether this Formula contains any empty Clauses and is therefore unsatisfiable.
@@ -98,7 +98,7 @@ namespace NanoByte.SatSolver
         /// Returns a copy of the Formula simplified by propagating all Unit Clauses.
         /// </summary>
         internal Formula<T> PropagateUnits()
-            => new Formula<T>(
+            => new(
                 this.Where(clause => clause.IsUnit).Select(x => x.Single())
                     .Aggregate(this.AsEnumerable(), (clauses, literal)
                          => clauses.Where(clause => clause.IsUnit || !clause.Contains(literal))
@@ -110,7 +110,7 @@ namespace NanoByte.SatSolver
         internal Formula<T> EliminatePureLiterals()
         {
             var pureLiterals = GetPureLiterals();
-            return new Formula<T>(this.Where(clause => !pureLiterals.Any(clause.Contains)));
+            return new(this.Where(clause => !pureLiterals.Any(clause.Contains)));
         }
 
         public override string ToString()

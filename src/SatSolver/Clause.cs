@@ -32,7 +32,7 @@ namespace NanoByte.SatSolver
         /// <param name="clause">The existing Clause.</param>
         /// <param name="literal">The additional Literal.</param>
         public static Clause<T> operator |(Clause<T> clause, Literal<T> literal)
-            => new Clause<T>(clause) {literal};
+            => new(clause) {literal};
 
         /// <summary>
         /// Creates a <see cref="Clause{T}"/> consisting of all Literals from an existing Clause plus an additional <see cref="Literal{T}"/>.
@@ -40,7 +40,7 @@ namespace NanoByte.SatSolver
         /// <param name="literal">The additional Literal.</param>
         /// <param name="clause">The existing Clause.</param>
         public static Clause<T> operator |(Literal<T> literal, Clause<T> clause)
-            => new Clause<T>(clause) {literal};
+            => new(clause) {literal};
 
         /// <summary>
         /// Creates a <see cref="Formula{T}"/> consisting of two <see cref="Clause{T}"/>s.
@@ -48,13 +48,13 @@ namespace NanoByte.SatSolver
         /// <param name="clause1">The first Clause.</param>
         /// <param name="clause2">The second Clause.</param>
         public static Formula<T> operator &(Clause<T> clause1, Clause<T> clause2)
-            => new Formula<T> {clause1, clause2};
+            => new() {clause1, clause2};
 
         /// <summary>
         /// Returns a negated copy of this Clause without the specified <paramref name="literal"/>.
         /// </summary>
         public Clause<T> Without(Literal<T> literal)
-            => new Clause<T>(this.Where(x => x != literal));
+            => new(this.Where(x => x != literal));
 
         /// <summary>
         /// Indicates whether this Clause is empty and therefore unsatisfiable.
