@@ -6,14 +6,14 @@ using Xunit;
 
 namespace NanoByte.SatSolver
 {
-    public class ClauseFacts
+    public class ClausesFacts
     {
         [Fact]
         public void AtMostOne()
         {
             Literal<string> a = "a", b = "b", c = "c";
 
-            Clause.AtMostOne(a, b, c)
+            Clauses.AtMostOne(a, b, c)
                   .Should().Equal((!a | !b) & (!a | !c) & (!b | !c));
         }
     }
