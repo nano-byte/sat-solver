@@ -16,5 +16,14 @@ namespace NanoByte.SatSolver
             Clauses.AtMostOne(a, b, c)
                   .Should().Equal((!a | !b) & (!a | !c) & (!b | !c));
         }
+
+        [Fact]
+        public void ExactlyOne()
+        {
+            Literal<string> a = "a", b = "b", c = "c";
+
+            Clauses.ExactlyOne(a, b, c)
+                  .Should().Equal((a | b | c) & (!a | !b) & (!a | !c) & (!b | !c));
+        }
     }
 }

@@ -31,5 +31,25 @@ namespace NanoByte.SatSolver
         public static IEnumerable<Clause<T>> AtMostOne<T>(IEnumerable<Literal<T>> literals)
             where T : IEquatable<T>
             => AtMostOne(literals.ToArray());
+
+        /// <summary>
+        /// Creates Clauses that together require exactly one of the specified <paramref name="literals"/> to be true.
+        /// </summary>
+        /// <typeparam name="T">The underlying type used to identify/compare Literals.</typeparam>
+        public static IEnumerable<Clause<T>> ExactlyOne<T>(params Literal<T>[] literals)
+            where T : IEquatable<T>
+        {
+            yield return new Clause<T>(literals);
+            foreach (var clause in AtMostOne(literals))
+                yield return clause;
+        }
+
+        /// <summary>
+        /// Creates Clauses that together require exactly one of the specified <paramref name="literals"/> to be true.
+        /// </summary>
+        /// <typeparam name="T">The underlying type used to identify/compare Literals.</typeparam>
+        public static IEnumerable<Clause<T>> ExactlyOne<T>(IEnumerable<Literal<T>> literals)
+            where T : IEquatable<T>
+            => ExactlyOne(literals.ToArray());
     }
 }
