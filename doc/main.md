@@ -8,18 +8,18 @@ Add a reference to the [NanoByte.SatSolver](https://www.nuget.org/packages/NanoB
 
 You need to choose the underlying type to use for \ref NanoByte.SatSolver.Literal "Literals" in Boolean Formulas. This will often be `int` or `string` but you can also use any other type that implements the `IEquatable<T>` interface. You can then create an instance of \ref NanoByte.SatSolver.Solver "Solver<T>":
 
-```csharp
+```{.cs}
 var solver = new Solver<string>();
 ```
 
 The library enables you to express Boolean \ref NanoByte.SatSolver.Formula "Formulas" using implicit casting and operators for human-friendly sample and test code:
-```csharp
+```{.cs}
 Literal<string> a = "a", b = "b", c = "c", d = "d";
 var formula = (a | b) & (!a | c) & (!c | d) & a;
 ```
 
 For constructing Formulas at run-time you can use a collection-like interface instead:
-```csharp
+```{.cs}
 var formula = new Formula<string>
 {
     new Clause<string> {Literal.Of("a"), Literal.Of("b")},
@@ -30,7 +30,7 @@ var formula = new Formula<string>
 ```
 
 Finally, you can use the solver to determine whether a Formula is satisfiable:
-```csharp
+```{.cs}
 bool result = solver.IsSatisfiable(formula);
 ```
 
