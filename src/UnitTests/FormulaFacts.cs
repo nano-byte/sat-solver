@@ -4,59 +4,59 @@
 using FluentAssertions;
 using Xunit;
 
-namespace NanoByte.SatSolver
+namespace NanoByte.SatSolver;
+
+public class FormulaFacts
 {
-    public class FormulaFacts
+    [Fact]
+    public void DetectsConsistency()
     {
-        [Fact]
-        public void DetectsConsistency()
-        {
-            Literal<string> a = "a", b = "b";
+        Literal<string> a = "a", b = "b";
 
-            (a & a).IsConsistent.Should().BeTrue();
-            (a & b).IsConsistent.Should().BeTrue();
-            (a & !b).IsConsistent.Should().BeTrue();
-            (a & !a).IsConsistent.Should().BeFalse(because: "Conflicting literal");
-            (a & (a | b)).IsConsistent.Should().BeFalse(because: "Non-literal clause");
-        }
+        (a & a).IsConsistent.Should().BeTrue();
+        (a & b).IsConsistent.Should().BeTrue();
+        (a & !b).IsConsistent.Should().BeTrue();
+        (a & !a).IsConsistent.Should().BeFalse(because: "Conflicting literal");
+        (a & (a | b)).IsConsistent.Should().BeFalse(because: "Non-literal clause");
+    }
 
-        [Fact]
-        public void PropagatesUnits()
-        {
-            Literal<string> a = "a", b = "b", c = "c", d = "d";
+    [Fact]
+    public void PropagatesUnits()
+    {
+        Literal<string> a = "a", b = "b", c = "c", d = "d";
 
-            ((a | b) & (!a | c) & (!c | d) & a)
-               .PropagateUnits()
-               .Should().Equal(c & (!c | d) & a);
+        ((a | b) & (!a | c) & (!c | d) & a)
+           .PropagateUnits()
+           .Should().Equal(c & (!c | d) & a);
 
-            (c & (!c | d) & a)
-               .PropagateUnits().Should().Equal(c & d & a);
-        }
+        (c & (!c | d) & a)
+           .PropagateUnits().Should().Equal(c & d & a);
+    }
 
-        [Fact]
-        public void EliminatesPureLiterals()
-        {
-            Literal<string> a = "a", b = "b", c = "c";
+    [Fact]
+    public void EliminatesPureLiterals()
+    {
+        Literal<string> a = "a", b = "b", c = "c";
 
-            ((a | b) & (!b | c) & (!c | a))
-               .EliminatePureLiterals()
-               .Should().Equal(!b | c);
-        }
+        ((a | b) & (!b | c) & (!c | a))
+           .EliminatePureLiterals()
+           .Should().Equal(!b | c);
+    }
 
-        [Fact]
-        public void Simplifies()
-        {
-            Literal<string> a = "a", b = "b", c = "c", d = "d";
+    [Fact]
+    public void Simplifies()
+    {
+        Literal<string> a = "a", b = "b", c = "c", d = "d";
 
-            ((a | b) & (!a | c) & (!c | d) & a)
-               .Simplify()
-               .Should().BeEmpty();
-        }
+        ((a | b) & (!a | c) & (!c | d) & a)
+           .Simplify()
+           .Should().BeEmpty();
+    }
 
-        [Fact]
-        public void SimplifiesCollectionStyle()
-        {
-            new Formula<string>
+    [Fact]
+    public void SimplifiesCollectionStyle()
+    {
+        new Formula<string>
             {
                 new Clause<string> {Literal.Of("a"), Literal.Of("b")},
                 new Clause<string> {Literal.Of("a").Negate(), Literal.Of("c")},
@@ -65,6 +65,5 @@ namespace NanoByte.SatSolver
             }
            .Simplify()
            .Should().BeEmpty();
-        }
     }
 }

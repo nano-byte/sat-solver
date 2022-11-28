@@ -4,26 +4,25 @@
 using FluentAssertions;
 using Xunit;
 
-namespace NanoByte.SatSolver
+namespace NanoByte.SatSolver;
+
+public class SolverFacts
 {
-    public class SolverFacts
+    [Fact]
+    public void DetectsSatisfiableFormulas()
     {
-        [Fact]
-        public void DetectsSatisfiableFormulas()
-        {
-            Literal<string> a = "a", b = "b", c = "c", d = "d";
-            var formula = (a | b) & (!a | c) & (!c | d) & a;
+        Literal<string> a = "a", b = "b", c = "c", d = "d";
+        var formula = (a | b) & (!a | c) & (!c | d) & a;
 
-            new Solver<string>().IsSatisfiable(formula).Should().BeTrue();
-        }
+        new Solver<string>().IsSatisfiable(formula).Should().BeTrue();
+    }
 
-        [Fact]
-        public void DetectsUnsatisfiableFormulas()
-        {
-            Literal<string> a = "a";
-            var formula = a & !a;
+    [Fact]
+    public void DetectsUnsatisfiableFormulas()
+    {
+        Literal<string> a = "a";
+        var formula = a & !a;
 
-            new Solver<string>().IsSatisfiable(formula).Should().BeFalse();
-        }
+        new Solver<string>().IsSatisfiable(formula).Should().BeFalse();
     }
 }
