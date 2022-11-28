@@ -1,7 +1,7 @@
 ﻿<Project>
-    
+
+  <!-- Build configuration -->
   <PropertyGroup>
-    <!-- Build configuration -->
     <RootNamespace>NanoByte.SatSolver</RootNamespace>
     <LangVersion>9.0</LangVersion>
     <Nullable>annotations</Nullable>
@@ -14,15 +14,22 @@
     <NoWarn>$(NoWarn);1591</NoWarn><!-- Missing XML comments -->
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\sgKey.snk</AssemblyOriginatorKeyFile>
-
-    <!-- Metadata -->
-    <Authors>Bastian Eicher</Authors>
-    <Copyright>Copyright Bastian Eicher</Copyright>
-    <PackageProjectUrl>https://sat-solver.nano-byte.net/</PackageProjectUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/nano-byte/sat-solver</RepositoryUrl>
   </PropertyGroup>
 
+  <!-- NuGet Metadata -->
+  <PropertyGroup>
+    <Authors>Bastian Eicher</Authors>
+    <Copyright>Copyright Bastian Eicher</Copyright>
+    <RepositoryUrl>https://github.com/nano-byte/sat-solver</RepositoryUrl>
+    <PackageProjectUrl>https://sat-solver.nano-byte.net/</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <!-- Build-time dependencies -->
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
