@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home | NanoByte SAT Solver </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Home | NanoByte SAT Solver ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="nanobyte-sat-solver">NanoByte SAT Solver</h1>
+
+<p>NanoByte SAT Solver is a DPLL Boolean Satisfiability Solver for .NET.</p>
+<h2 id="usage">Usage</h2>
+<p>Add a reference to the <a href="https://www.nuget.org/packages/NanoByte.SatSolver/">NanoByte.SatSolver</a> NuGet package to your project. It is available for .NET Framework 2.0+ and .NET Standard 1.0+.</p>
+<p>You need to choose the underlying type to use for <a class="xref" href="api/NanoByte.SatSolver.Literal.html">Literals</a> in Boolean Formulas. This will often be <code>int</code> or <code>string</code> but you can also use any other type that implements the <code>IEquatable&lt;T&gt;</code> interface. You can then create an instance of <a class="xref" href="api/NanoByte.SatSolver.Solver-1.html">Solver&lt;T&gt;</a>:</p>
+<pre><code class="lang-csharp">var solver = new Solver&lt;string&gt;();
+</code></pre><p>The library enables you to express Boolean <a class="xref" href="api/NanoByte.SatSolver.Formula-1.html">Formulas</a> using implicit casting and operators for human-friendly sample and test code:</p>
+<pre><code class="lang-csharp">Literal&lt;string&gt; a = &quot;a&quot;, b = &quot;b&quot;, c = &quot;c&quot;, d = &quot;d&quot;;
+var formula = (a | b) &amp; (!a | c) &amp; (!c | d) &amp; a;
+</code></pre><p>For constructing Formulas at run-time you can use a collection-like interface instead:</p>
+<pre><code class="lang-csharp">var formula = new Formula&lt;string&gt;
+{
+    new Clause&lt;string&gt; {Literal.Of(&quot;a&quot;), Literal.Of(&quot;b&quot;)},
+    new Clause&lt;string&gt; {Literal.Of(&quot;a&quot;).Negate(), Literal.Of(&quot;c&quot;)},
+    new Clause&lt;string&gt; {Literal.Of(&quot;c&quot;).Negate(), Literal.Of(&quot;d&quot;)},
+    new Clause&lt;string&gt; {Literal.Of(&quot;a&quot;)}
+};
+</code></pre><p>Finally, you can use the solver to determine whether a Formula is satisfiable:</p>
+<pre><code class="lang-csharp">bool result = solver.IsSatisfiable(formula);
+</code></pre><p>When the Solver needs to choose a Literal to assign a truth value to during backtracking, it simply picks the first unset Literal from the list. You can replace this with your own domain-specific logic for better performance by deriving from <a class="xref" href="api/NanoByte.SatSolver.Solver-1.html">Solver&lt;T&gt;</a> and overriding the <a class="xref" href="api/NanoByte.SatSolver.Solver-1.html#NanoByte_SatSolver_Solver_1_ChooseLiteral_NanoByte_SatSolver_Formula__0__">ChooseLiteral()</a> method.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nano-byte/sat-solver/blob/heads/tags/0.3.1/doc/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Bastian Eicher
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

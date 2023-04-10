@@ -1,0 +1,176 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/sat-solver/sat-solver/doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Clause-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Clause-1.html",
+          "hash": "T1JzDaK2zXiF0fWDlz9PAFdWOt0xmeqNRslpfSV+9Ls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Clauses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Clauses.html",
+          "hash": "9E/+g7S82goXAV8UbuIi81KpXSiRTEqetZ7g2ue/piI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Formula-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Formula-1.html",
+          "hash": "5FjaY+RjQ4sxHxEl1FrnEuyzYHlVdRhgWEOSDbsRczw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Literal-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Literal-1.html",
+          "hash": "G9TWDCcpbBL8Mr7+4RyWCVKSxa+YRqm1TcqV+PCpBtQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Literal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Literal.html",
+          "hash": "2BUpBRTVlFOMp62SGa83mKkmNjcpZj87CMZnV1pNd9U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Solver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Solver-1.html",
+          "hash": "pgvHsjXYeRJS8RZu5vLbArb/aePAaUejFGaIqbQJPs4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.html",
+          "hash": "ItP1G0Jd/lnKs3rfPa9QXiLHydTLBIPQfizFC2i7w2w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "RqfJMiPP0f/igUrpL3oiCFapMHDZK3f9ydYcY+CIxY0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "BsSCZ8FjbsELk2SYyVELGM5YcYHTyMlo00fkB9vUJMY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "f/TFEkq2luq4iE9a4r6hEbx+nob0EFtb3xNSW728oUo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
