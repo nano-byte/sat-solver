@@ -48,7 +48,7 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
     /// <param name="clause1">The first Clause.</param>
     /// <param name="clause2">The second Clause.</param>
     public static Formula<T> operator &(Clause<T> clause1, Clause<T> clause2)
-        => new() {clause1, clause2};
+        => [clause1, clause2];
 
     /// <summary>
     /// Returns a negated copy of this Clause without the specified <paramref name="literal"/>.

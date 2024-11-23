@@ -60,7 +60,7 @@ public readonly struct Literal<T> : IEquatable<Literal<T>>
     /// </summary>
     /// <param name="literal">The single Literal in the Clause.</param>
     public static implicit operator Clause<T>(Literal<T> literal)
-        => new() {literal};
+        => [literal];
 
     /// <summary>
     /// Creates a <see cref="Clause{T}"/> consisting of two <see cref="Literal{T}"/>s.
@@ -68,7 +68,7 @@ public readonly struct Literal<T> : IEquatable<Literal<T>>
     /// <param name="literal1">The first Literal in the Clause.</param>
     /// <param name="literal2">The second Literal in the Clause.</param>
     public static Clause<T> operator |(Literal<T> literal1, Literal<T> literal2)
-        => new() {literal1, literal2};
+        => [literal1, literal2];
 
     /// <summary>
     /// Creates a <see cref="Formula{T}"/> consisting of two <see cref="Clause{T}"/>s, each containing a single <see cref="Literal{T}"/>.
@@ -76,7 +76,7 @@ public readonly struct Literal<T> : IEquatable<Literal<T>>
     /// <param name="literal1">The Literal in the first Clause.</param>
     /// <param name="literal2">The Literal in the second Clause.</param>
     public static Formula<T> operator &(Literal<T> literal1, Literal<T> literal2)
-        => new() {literal1, literal2};
+        => [literal1, literal2];
 
     /// <summary>
     /// Checks whether this Literal conflicts with the given <paramref name="literal"/>.
