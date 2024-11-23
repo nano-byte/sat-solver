@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- Project properties -->
+  <!-- Build config -->
   <PropertyGroup>
     <AssemblyName>NanoByte.SatSolver</AssemblyName>
     <Description>DPLL Boolean Satisfiability Solver</Description>
