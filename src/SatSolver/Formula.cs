@@ -119,7 +119,7 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
     public bool Equals(Formula<T>? other)
         => other != null && Count == other.Count && other.All(Contains);
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
         => obj is Formula<T> other && Equals(other);
 
     public override int GetHashCode()

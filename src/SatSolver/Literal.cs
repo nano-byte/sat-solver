@@ -96,7 +96,7 @@ public readonly struct Literal<T> : IEquatable<Literal<T>>
     public bool Equals(Literal<T> other)
         => Value.Equals(other.Value) && Negated == other.Negated;
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
         => obj is Literal<T> literal && Equals(literal);
 
     public override int GetHashCode()

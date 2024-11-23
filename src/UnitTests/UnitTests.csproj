@@ -3,7 +3,7 @@
   <!-- Build config -->
   <PropertyGroup>
     <AssemblyName>NanoByte.SatSolver.UnitTests</AssemblyName>
-    <TargetFrameworks>net472;net6.0</TargetFrameworks>
+    <TargetFrameworks>net472;net9.0</TargetFrameworks>
     <IsPackable>False</IsPackable>
     <DeterministicSourcePaths>False</DeterministicSourcePaths>
   </PropertyGroup>

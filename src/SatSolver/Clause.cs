@@ -74,7 +74,7 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
     public bool Equals(Clause<T>? other)
         => other != null && Count == other.Count && other.All(Contains);
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
         => obj is Clause<T> other && Equals(other);
 
     public override int GetHashCode()
