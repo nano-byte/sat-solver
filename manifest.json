@@ -1,0 +1,125 @@
+{
+  "source_base_path": "/home/runner/work/sat-solver/sat-solver/doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Clause-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Clause-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Clauses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Clauses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Formula-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Formula-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Literal-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Literal-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Literal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Literal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Solver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Solver-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
