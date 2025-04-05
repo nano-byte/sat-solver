@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Shared/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="SatSolver/SatSolver.csproj" />
+  <Project Path="UnitTests/UnitTests.csproj" />
+</Solution>
