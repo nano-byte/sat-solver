@@ -1,0 +1,839 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: NanoByte.SatSolver
+  name: NanoByte.SatSolver
+  href: api/NanoByte.SatSolver.html
+  commentId: N:NanoByte.SatSolver
+  fullName: NanoByte.SatSolver
+  nameWithType: NanoByte.SatSolver
+- uid: NanoByte.SatSolver.Clause`1
+  name: Clause<T>
+  href: api/NanoByte.SatSolver.Clause-1.html
+  commentId: T:NanoByte.SatSolver.Clause`1
+  name.vb: Clause(Of T)
+  fullName: NanoByte.SatSolver.Clause<T>
+  fullName.vb: NanoByte.SatSolver.Clause(Of T)
+  nameWithType: Clause<T>
+  nameWithType.vb: Clause(Of T)
+- uid: NanoByte.SatSolver.Clause`1.#ctor
+  name: Clause()
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1__ctor
+  commentId: M:NanoByte.SatSolver.Clause`1.#ctor
+  name.vb: New()
+  fullName: NanoByte.SatSolver.Clause<T>.Clause()
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).New()
+  nameWithType: Clause<T>.Clause()
+  nameWithType.vb: Clause(Of T).New()
+- uid: NanoByte.SatSolver.Clause`1.#ctor(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{`0}})
+  name: Clause(IEnumerable<Literal<T>>)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1__ctor_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Literal__0___
+  commentId: M:NanoByte.SatSolver.Clause`1.#ctor(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{`0}})
+  name.vb: New(IEnumerable(Of Literal(Of T)))
+  fullName: NanoByte.SatSolver.Clause<T>.Clause(System.Collections.Generic.IEnumerable<NanoByte.SatSolver.Literal<T>>)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).New(System.Collections.Generic.IEnumerable(Of NanoByte.SatSolver.Literal(Of T)))
+  nameWithType: Clause<T>.Clause(IEnumerable<Literal<T>>)
+  nameWithType.vb: Clause(Of T).New(IEnumerable(Of Literal(Of T)))
+- uid: NanoByte.SatSolver.Clause`1.#ctor*
+  name: Clause
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1__ctor_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NanoByte.SatSolver.Clause<T>.Clause
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).New
+  nameWithType: Clause<T>.Clause
+  nameWithType.vb: Clause(Of T).New
+- uid: NanoByte.SatSolver.Clause`1.Equals(NanoByte.SatSolver.Clause{`0})
+  name: Equals(Clause<T>?)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_Equals_NanoByte_SatSolver_Clause__0__
+  commentId: M:NanoByte.SatSolver.Clause`1.Equals(NanoByte.SatSolver.Clause{`0})
+  name.vb: Equals(Clause(Of T))
+  fullName: NanoByte.SatSolver.Clause<T>.Equals(NanoByte.SatSolver.Clause<T>?)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Equals(NanoByte.SatSolver.Clause(Of T))
+  nameWithType: Clause<T>.Equals(Clause<T>?)
+  nameWithType.vb: Clause(Of T).Equals(Clause(Of T))
+- uid: NanoByte.SatSolver.Clause`1.Equals(System.Object)
+  name: Equals(object?)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_Equals_System_Object_
+  commentId: M:NanoByte.SatSolver.Clause`1.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: NanoByte.SatSolver.Clause<T>.Equals(object?)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Equals(Object)
+  nameWithType: Clause<T>.Equals(object?)
+  nameWithType.vb: Clause(Of T).Equals(Object)
+- uid: NanoByte.SatSolver.Clause`1.Equals*
+  name: Equals
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_Equals_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.Equals
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clause<T>.Equals
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Equals
+  nameWithType: Clause<T>.Equals
+  nameWithType.vb: Clause(Of T).Equals
+- uid: NanoByte.SatSolver.Clause`1.GetHashCode
+  name: GetHashCode()
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_GetHashCode
+  commentId: M:NanoByte.SatSolver.Clause`1.GetHashCode
+  fullName: NanoByte.SatSolver.Clause<T>.GetHashCode()
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).GetHashCode()
+  nameWithType: Clause<T>.GetHashCode()
+  nameWithType.vb: Clause(Of T).GetHashCode()
+- uid: NanoByte.SatSolver.Clause`1.GetHashCode*
+  name: GetHashCode
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_GetHashCode_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.GetHashCode
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clause<T>.GetHashCode
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).GetHashCode
+  nameWithType: Clause<T>.GetHashCode
+  nameWithType.vb: Clause(Of T).GetHashCode
+- uid: NanoByte.SatSolver.Clause`1.IsEmpty
+  name: IsEmpty
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_IsEmpty
+  commentId: P:NanoByte.SatSolver.Clause`1.IsEmpty
+  fullName: NanoByte.SatSolver.Clause<T>.IsEmpty
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).IsEmpty
+  nameWithType: Clause<T>.IsEmpty
+  nameWithType.vb: Clause(Of T).IsEmpty
+- uid: NanoByte.SatSolver.Clause`1.IsEmpty*
+  name: IsEmpty
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_IsEmpty_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.IsEmpty
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clause<T>.IsEmpty
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).IsEmpty
+  nameWithType: Clause<T>.IsEmpty
+  nameWithType.vb: Clause(Of T).IsEmpty
+- uid: NanoByte.SatSolver.Clause`1.IsUnit
+  name: IsUnit
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_IsUnit
+  commentId: P:NanoByte.SatSolver.Clause`1.IsUnit
+  fullName: NanoByte.SatSolver.Clause<T>.IsUnit
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).IsUnit
+  nameWithType: Clause<T>.IsUnit
+  nameWithType.vb: Clause(Of T).IsUnit
+- uid: NanoByte.SatSolver.Clause`1.IsUnit*
+  name: IsUnit
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_IsUnit_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.IsUnit
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clause<T>.IsUnit
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).IsUnit
+  nameWithType: Clause<T>.IsUnit
+  nameWithType.vb: Clause(Of T).IsUnit
+- uid: NanoByte.SatSolver.Clause`1.ToString
+  name: ToString()
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_ToString
+  commentId: M:NanoByte.SatSolver.Clause`1.ToString
+  fullName: NanoByte.SatSolver.Clause<T>.ToString()
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).ToString()
+  nameWithType: Clause<T>.ToString()
+  nameWithType.vb: Clause(Of T).ToString()
+- uid: NanoByte.SatSolver.Clause`1.ToString*
+  name: ToString
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_ToString_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.ToString
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clause<T>.ToString
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).ToString
+  nameWithType: Clause<T>.ToString
+  nameWithType.vb: Clause(Of T).ToString
+- uid: NanoByte.SatSolver.Clause`1.Without(NanoByte.SatSolver.Literal{`0})
+  name: Without(Literal<T>)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_Without_NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Clause`1.Without(NanoByte.SatSolver.Literal{`0})
+  name.vb: Without(Literal(Of T))
+  fullName: NanoByte.SatSolver.Clause<T>.Without(NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Without(NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Clause<T>.Without(Literal<T>)
+  nameWithType.vb: Clause(Of T).Without(Literal(Of T))
+- uid: NanoByte.SatSolver.Clause`1.Without*
+  name: Without
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_Without_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.Without
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clause<T>.Without
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Without
+  nameWithType: Clause<T>.Without
+  nameWithType.vb: Clause(Of T).Without
+- uid: NanoByte.SatSolver.Clause`1.op_BitwiseAnd(NanoByte.SatSolver.Clause{`0},NanoByte.SatSolver.Clause{`0})
+  name: operator &(Clause<T>, Clause<T>)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_op_BitwiseAnd_NanoByte_SatSolver_Clause__0__NanoByte_SatSolver_Clause__0__
+  commentId: M:NanoByte.SatSolver.Clause`1.op_BitwiseAnd(NanoByte.SatSolver.Clause{`0},NanoByte.SatSolver.Clause{`0})
+  name.vb: And(Clause(Of T), Clause(Of T))
+  fullName: NanoByte.SatSolver.Clause<T>.operator &(NanoByte.SatSolver.Clause<T>, NanoByte.SatSolver.Clause<T>)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).And(NanoByte.SatSolver.Clause(Of T), NanoByte.SatSolver.Clause(Of T))
+  nameWithType: Clause<T>.operator &(Clause<T>, Clause<T>)
+  nameWithType.vb: Clause(Of T).And(Clause(Of T), Clause(Of T))
+- uid: NanoByte.SatSolver.Clause`1.op_BitwiseAnd*
+  name: operator &
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_op_BitwiseAnd_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.op_BitwiseAnd
+  isSpec: "True"
+  name.vb: And
+  fullName: NanoByte.SatSolver.Clause<T>.operator &
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).And
+  nameWithType: Clause<T>.operator &
+  nameWithType.vb: Clause(Of T).And
+- uid: NanoByte.SatSolver.Clause`1.op_BitwiseOr(NanoByte.SatSolver.Clause{`0},NanoByte.SatSolver.Literal{`0})
+  name: operator |(Clause<T>, Literal<T>)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_op_BitwiseOr_NanoByte_SatSolver_Clause__0__NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Clause`1.op_BitwiseOr(NanoByte.SatSolver.Clause{`0},NanoByte.SatSolver.Literal{`0})
+  name.vb: Or(Clause(Of T), Literal(Of T))
+  fullName: NanoByte.SatSolver.Clause<T>.operator |(NanoByte.SatSolver.Clause<T>, NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Or(NanoByte.SatSolver.Clause(Of T), NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Clause<T>.operator |(Clause<T>, Literal<T>)
+  nameWithType.vb: Clause(Of T).Or(Clause(Of T), Literal(Of T))
+- uid: NanoByte.SatSolver.Clause`1.op_BitwiseOr(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Clause{`0})
+  name: operator |(Literal<T>, Clause<T>)
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_op_BitwiseOr_NanoByte_SatSolver_Literal__0__NanoByte_SatSolver_Clause__0__
+  commentId: M:NanoByte.SatSolver.Clause`1.op_BitwiseOr(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Clause{`0})
+  name.vb: Or(Literal(Of T), Clause(Of T))
+  fullName: NanoByte.SatSolver.Clause<T>.operator |(NanoByte.SatSolver.Literal<T>, NanoByte.SatSolver.Clause<T>)
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Or(NanoByte.SatSolver.Literal(Of T), NanoByte.SatSolver.Clause(Of T))
+  nameWithType: Clause<T>.operator |(Literal<T>, Clause<T>)
+  nameWithType.vb: Clause(Of T).Or(Literal(Of T), Clause(Of T))
+- uid: NanoByte.SatSolver.Clause`1.op_BitwiseOr*
+  name: operator |
+  href: api/NanoByte.SatSolver.Clause-1.html#NanoByte_SatSolver_Clause_1_op_BitwiseOr_
+  commentId: Overload:NanoByte.SatSolver.Clause`1.op_BitwiseOr
+  isSpec: "True"
+  name.vb: Or
+  fullName: NanoByte.SatSolver.Clause<T>.operator |
+  fullName.vb: NanoByte.SatSolver.Clause(Of T).Or
+  nameWithType: Clause<T>.operator |
+  nameWithType.vb: Clause(Of T).Or
+- uid: NanoByte.SatSolver.Clauses
+  name: Clauses
+  href: api/NanoByte.SatSolver.Clauses.html
+  commentId: T:NanoByte.SatSolver.Clauses
+  fullName: NanoByte.SatSolver.Clauses
+  nameWithType: Clauses
+- uid: NanoByte.SatSolver.Clauses.AtMostOne*
+  name: AtMostOne
+  href: api/NanoByte.SatSolver.Clauses.html#NanoByte_SatSolver_Clauses_AtMostOne_
+  commentId: Overload:NanoByte.SatSolver.Clauses.AtMostOne
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clauses.AtMostOne
+  nameWithType: Clauses.AtMostOne
+- uid: NanoByte.SatSolver.Clauses.AtMostOne``1(NanoByte.SatSolver.Literal{``0}[])
+  name: AtMostOne<T>(params Literal<T>[])
+  href: api/NanoByte.SatSolver.Clauses.html#NanoByte_SatSolver_Clauses_AtMostOne__1_NanoByte_SatSolver_Literal___0____
+  commentId: M:NanoByte.SatSolver.Clauses.AtMostOne``1(NanoByte.SatSolver.Literal{``0}[])
+  name.vb: AtMostOne(Of T)(ParamArray Literal(Of T)())
+  fullName: NanoByte.SatSolver.Clauses.AtMostOne<T>(params NanoByte.SatSolver.Literal<T>[])
+  fullName.vb: NanoByte.SatSolver.Clauses.AtMostOne(Of T)(ParamArray NanoByte.SatSolver.Literal(Of T)())
+  nameWithType: Clauses.AtMostOne<T>(params Literal<T>[])
+  nameWithType.vb: Clauses.AtMostOne(Of T)(ParamArray Literal(Of T)())
+- uid: NanoByte.SatSolver.Clauses.AtMostOne``1(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{``0}})
+  name: AtMostOne<T>(IEnumerable<Literal<T>>)
+  href: api/NanoByte.SatSolver.Clauses.html#NanoByte_SatSolver_Clauses_AtMostOne__1_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Literal___0___
+  commentId: M:NanoByte.SatSolver.Clauses.AtMostOne``1(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{``0}})
+  name.vb: AtMostOne(Of T)(IEnumerable(Of Literal(Of T)))
+  fullName: NanoByte.SatSolver.Clauses.AtMostOne<T>(System.Collections.Generic.IEnumerable<NanoByte.SatSolver.Literal<T>>)
+  fullName.vb: NanoByte.SatSolver.Clauses.AtMostOne(Of T)(System.Collections.Generic.IEnumerable(Of NanoByte.SatSolver.Literal(Of T)))
+  nameWithType: Clauses.AtMostOne<T>(IEnumerable<Literal<T>>)
+  nameWithType.vb: Clauses.AtMostOne(Of T)(IEnumerable(Of Literal(Of T)))
+- uid: NanoByte.SatSolver.Clauses.ExactlyOne*
+  name: ExactlyOne
+  href: api/NanoByte.SatSolver.Clauses.html#NanoByte_SatSolver_Clauses_ExactlyOne_
+  commentId: Overload:NanoByte.SatSolver.Clauses.ExactlyOne
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Clauses.ExactlyOne
+  nameWithType: Clauses.ExactlyOne
+- uid: NanoByte.SatSolver.Clauses.ExactlyOne``1(NanoByte.SatSolver.Literal{``0}[])
+  name: ExactlyOne<T>(params Literal<T>[])
+  href: api/NanoByte.SatSolver.Clauses.html#NanoByte_SatSolver_Clauses_ExactlyOne__1_NanoByte_SatSolver_Literal___0____
+  commentId: M:NanoByte.SatSolver.Clauses.ExactlyOne``1(NanoByte.SatSolver.Literal{``0}[])
+  name.vb: ExactlyOne(Of T)(ParamArray Literal(Of T)())
+  fullName: NanoByte.SatSolver.Clauses.ExactlyOne<T>(params NanoByte.SatSolver.Literal<T>[])
+  fullName.vb: NanoByte.SatSolver.Clauses.ExactlyOne(Of T)(ParamArray NanoByte.SatSolver.Literal(Of T)())
+  nameWithType: Clauses.ExactlyOne<T>(params Literal<T>[])
+  nameWithType.vb: Clauses.ExactlyOne(Of T)(ParamArray Literal(Of T)())
+- uid: NanoByte.SatSolver.Clauses.ExactlyOne``1(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{``0}})
+  name: ExactlyOne<T>(IEnumerable<Literal<T>>)
+  href: api/NanoByte.SatSolver.Clauses.html#NanoByte_SatSolver_Clauses_ExactlyOne__1_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Literal___0___
+  commentId: M:NanoByte.SatSolver.Clauses.ExactlyOne``1(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{``0}})
+  name.vb: ExactlyOne(Of T)(IEnumerable(Of Literal(Of T)))
+  fullName: NanoByte.SatSolver.Clauses.ExactlyOne<T>(System.Collections.Generic.IEnumerable<NanoByte.SatSolver.Literal<T>>)
+  fullName.vb: NanoByte.SatSolver.Clauses.ExactlyOne(Of T)(System.Collections.Generic.IEnumerable(Of NanoByte.SatSolver.Literal(Of T)))
+  nameWithType: Clauses.ExactlyOne<T>(IEnumerable<Literal<T>>)
+  nameWithType.vb: Clauses.ExactlyOne(Of T)(IEnumerable(Of Literal(Of T)))
+- uid: NanoByte.SatSolver.Formula`1
+  name: Formula<T>
+  href: api/NanoByte.SatSolver.Formula-1.html
+  commentId: T:NanoByte.SatSolver.Formula`1
+  name.vb: Formula(Of T)
+  fullName: NanoByte.SatSolver.Formula<T>
+  fullName.vb: NanoByte.SatSolver.Formula(Of T)
+  nameWithType: Formula<T>
+  nameWithType.vb: Formula(Of T)
+- uid: NanoByte.SatSolver.Formula`1.#ctor
+  name: Formula()
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1__ctor
+  commentId: M:NanoByte.SatSolver.Formula`1.#ctor
+  name.vb: New()
+  fullName: NanoByte.SatSolver.Formula<T>.Formula()
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).New()
+  nameWithType: Formula<T>.Formula()
+  nameWithType.vb: Formula(Of T).New()
+- uid: NanoByte.SatSolver.Formula`1.#ctor(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Clause{`0}})
+  name: Formula(IEnumerable<Clause<T>>)
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1__ctor_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Clause__0___
+  commentId: M:NanoByte.SatSolver.Formula`1.#ctor(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Clause{`0}})
+  name.vb: New(IEnumerable(Of Clause(Of T)))
+  fullName: NanoByte.SatSolver.Formula<T>.Formula(System.Collections.Generic.IEnumerable<NanoByte.SatSolver.Clause<T>>)
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).New(System.Collections.Generic.IEnumerable(Of NanoByte.SatSolver.Clause(Of T)))
+  nameWithType: Formula<T>.Formula(IEnumerable<Clause<T>>)
+  nameWithType.vb: Formula(Of T).New(IEnumerable(Of Clause(Of T)))
+- uid: NanoByte.SatSolver.Formula`1.#ctor*
+  name: Formula
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1__ctor_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NanoByte.SatSolver.Formula<T>.Formula
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).New
+  nameWithType: Formula<T>.Formula
+  nameWithType.vb: Formula(Of T).New
+- uid: NanoByte.SatSolver.Formula`1.ContainsEmptyClause
+  name: ContainsEmptyClause
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_ContainsEmptyClause
+  commentId: P:NanoByte.SatSolver.Formula`1.ContainsEmptyClause
+  fullName: NanoByte.SatSolver.Formula<T>.ContainsEmptyClause
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).ContainsEmptyClause
+  nameWithType: Formula<T>.ContainsEmptyClause
+  nameWithType.vb: Formula(Of T).ContainsEmptyClause
+- uid: NanoByte.SatSolver.Formula`1.ContainsEmptyClause*
+  name: ContainsEmptyClause
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_ContainsEmptyClause_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.ContainsEmptyClause
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.ContainsEmptyClause
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).ContainsEmptyClause
+  nameWithType: Formula<T>.ContainsEmptyClause
+  nameWithType.vb: Formula(Of T).ContainsEmptyClause
+- uid: NanoByte.SatSolver.Formula`1.Equals(NanoByte.SatSolver.Formula{`0})
+  name: Equals(Formula<T>?)
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_Equals_NanoByte_SatSolver_Formula__0__
+  commentId: M:NanoByte.SatSolver.Formula`1.Equals(NanoByte.SatSolver.Formula{`0})
+  name.vb: Equals(Formula(Of T))
+  fullName: NanoByte.SatSolver.Formula<T>.Equals(NanoByte.SatSolver.Formula<T>?)
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).Equals(NanoByte.SatSolver.Formula(Of T))
+  nameWithType: Formula<T>.Equals(Formula<T>?)
+  nameWithType.vb: Formula(Of T).Equals(Formula(Of T))
+- uid: NanoByte.SatSolver.Formula`1.Equals(System.Object)
+  name: Equals(object?)
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_Equals_System_Object_
+  commentId: M:NanoByte.SatSolver.Formula`1.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: NanoByte.SatSolver.Formula<T>.Equals(object?)
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).Equals(Object)
+  nameWithType: Formula<T>.Equals(object?)
+  nameWithType.vb: Formula(Of T).Equals(Object)
+- uid: NanoByte.SatSolver.Formula`1.Equals*
+  name: Equals
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_Equals_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.Equals
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.Equals
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).Equals
+  nameWithType: Formula<T>.Equals
+  nameWithType.vb: Formula(Of T).Equals
+- uid: NanoByte.SatSolver.Formula`1.GetHashCode
+  name: GetHashCode()
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetHashCode
+  commentId: M:NanoByte.SatSolver.Formula`1.GetHashCode
+  fullName: NanoByte.SatSolver.Formula<T>.GetHashCode()
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).GetHashCode()
+  nameWithType: Formula<T>.GetHashCode()
+  nameWithType.vb: Formula(Of T).GetHashCode()
+- uid: NanoByte.SatSolver.Formula`1.GetHashCode*
+  name: GetHashCode
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetHashCode_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.GetHashCode
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.GetHashCode
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).GetHashCode
+  nameWithType: Formula<T>.GetHashCode
+  nameWithType.vb: Formula(Of T).GetHashCode
+- uid: NanoByte.SatSolver.Formula`1.GetLiterals
+  name: GetLiterals()
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetLiterals
+  commentId: M:NanoByte.SatSolver.Formula`1.GetLiterals
+  fullName: NanoByte.SatSolver.Formula<T>.GetLiterals()
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).GetLiterals()
+  nameWithType: Formula<T>.GetLiterals()
+  nameWithType.vb: Formula(Of T).GetLiterals()
+- uid: NanoByte.SatSolver.Formula`1.GetLiterals*
+  name: GetLiterals
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetLiterals_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.GetLiterals
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.GetLiterals
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).GetLiterals
+  nameWithType: Formula<T>.GetLiterals
+  nameWithType.vb: Formula(Of T).GetLiterals
+- uid: NanoByte.SatSolver.Formula`1.GetPureLiterals
+  name: GetPureLiterals()
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetPureLiterals
+  commentId: M:NanoByte.SatSolver.Formula`1.GetPureLiterals
+  fullName: NanoByte.SatSolver.Formula<T>.GetPureLiterals()
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).GetPureLiterals()
+  nameWithType: Formula<T>.GetPureLiterals()
+  nameWithType.vb: Formula(Of T).GetPureLiterals()
+- uid: NanoByte.SatSolver.Formula`1.GetPureLiterals*
+  name: GetPureLiterals
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetPureLiterals_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.GetPureLiterals
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.GetPureLiterals
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).GetPureLiterals
+  nameWithType: Formula<T>.GetPureLiterals
+  nameWithType.vb: Formula(Of T).GetPureLiterals
+- uid: NanoByte.SatSolver.Formula`1.IsConsistent
+  name: IsConsistent
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_IsConsistent
+  commentId: P:NanoByte.SatSolver.Formula`1.IsConsistent
+  fullName: NanoByte.SatSolver.Formula<T>.IsConsistent
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).IsConsistent
+  nameWithType: Formula<T>.IsConsistent
+  nameWithType.vb: Formula(Of T).IsConsistent
+- uid: NanoByte.SatSolver.Formula`1.IsConsistent*
+  name: IsConsistent
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_IsConsistent_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.IsConsistent
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.IsConsistent
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).IsConsistent
+  nameWithType: Formula<T>.IsConsistent
+  nameWithType.vb: Formula(Of T).IsConsistent
+- uid: NanoByte.SatSolver.Formula`1.Simplify
+  name: Simplify()
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_Simplify
+  commentId: M:NanoByte.SatSolver.Formula`1.Simplify
+  fullName: NanoByte.SatSolver.Formula<T>.Simplify()
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).Simplify()
+  nameWithType: Formula<T>.Simplify()
+  nameWithType.vb: Formula(Of T).Simplify()
+- uid: NanoByte.SatSolver.Formula`1.Simplify*
+  name: Simplify
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_Simplify_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.Simplify
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.Simplify
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).Simplify
+  nameWithType: Formula<T>.Simplify
+  nameWithType.vb: Formula(Of T).Simplify
+- uid: NanoByte.SatSolver.Formula`1.ToString
+  name: ToString()
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_ToString
+  commentId: M:NanoByte.SatSolver.Formula`1.ToString
+  fullName: NanoByte.SatSolver.Formula<T>.ToString()
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).ToString()
+  nameWithType: Formula<T>.ToString()
+  nameWithType.vb: Formula(Of T).ToString()
+- uid: NanoByte.SatSolver.Formula`1.ToString*
+  name: ToString
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_ToString_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.ToString
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Formula<T>.ToString
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).ToString
+  nameWithType: Formula<T>.ToString
+  nameWithType.vb: Formula(Of T).ToString
+- uid: NanoByte.SatSolver.Formula`1.op_BitwiseAnd(NanoByte.SatSolver.Clause{`0},NanoByte.SatSolver.Formula{`0})
+  name: operator &(Clause<T>, Formula<T>)
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_op_BitwiseAnd_NanoByte_SatSolver_Clause__0__NanoByte_SatSolver_Formula__0__
+  commentId: M:NanoByte.SatSolver.Formula`1.op_BitwiseAnd(NanoByte.SatSolver.Clause{`0},NanoByte.SatSolver.Formula{`0})
+  name.vb: And(Clause(Of T), Formula(Of T))
+  fullName: NanoByte.SatSolver.Formula<T>.operator &(NanoByte.SatSolver.Clause<T>, NanoByte.SatSolver.Formula<T>)
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).And(NanoByte.SatSolver.Clause(Of T), NanoByte.SatSolver.Formula(Of T))
+  nameWithType: Formula<T>.operator &(Clause<T>, Formula<T>)
+  nameWithType.vb: Formula(Of T).And(Clause(Of T), Formula(Of T))
+- uid: NanoByte.SatSolver.Formula`1.op_BitwiseAnd(NanoByte.SatSolver.Formula{`0},NanoByte.SatSolver.Clause{`0})
+  name: operator &(Formula<T>, Clause<T>)
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_op_BitwiseAnd_NanoByte_SatSolver_Formula__0__NanoByte_SatSolver_Clause__0__
+  commentId: M:NanoByte.SatSolver.Formula`1.op_BitwiseAnd(NanoByte.SatSolver.Formula{`0},NanoByte.SatSolver.Clause{`0})
+  name.vb: And(Formula(Of T), Clause(Of T))
+  fullName: NanoByte.SatSolver.Formula<T>.operator &(NanoByte.SatSolver.Formula<T>, NanoByte.SatSolver.Clause<T>)
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).And(NanoByte.SatSolver.Formula(Of T), NanoByte.SatSolver.Clause(Of T))
+  nameWithType: Formula<T>.operator &(Formula<T>, Clause<T>)
+  nameWithType.vb: Formula(Of T).And(Formula(Of T), Clause(Of T))
+- uid: NanoByte.SatSolver.Formula`1.op_BitwiseAnd*
+  name: operator &
+  href: api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_op_BitwiseAnd_
+  commentId: Overload:NanoByte.SatSolver.Formula`1.op_BitwiseAnd
+  isSpec: "True"
+  name.vb: And
+  fullName: NanoByte.SatSolver.Formula<T>.operator &
+  fullName.vb: NanoByte.SatSolver.Formula(Of T).And
+  nameWithType: Formula<T>.operator &
+  nameWithType.vb: Formula(Of T).And
+- uid: NanoByte.SatSolver.Literal
+  name: Literal
+  href: api/NanoByte.SatSolver.Literal.html
+  commentId: T:NanoByte.SatSolver.Literal
+  fullName: NanoByte.SatSolver.Literal
+  nameWithType: Literal
+- uid: NanoByte.SatSolver.Literal.Of*
+  name: Of
+  href: api/NanoByte.SatSolver.Literal.html#NanoByte_SatSolver_Literal_Of_
+  commentId: Overload:NanoByte.SatSolver.Literal.Of
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal.Of
+  nameWithType: Literal.Of
+- uid: NanoByte.SatSolver.Literal.Of``1(``0)
+  name: Of<T>(T)
+  href: api/NanoByte.SatSolver.Literal.html#NanoByte_SatSolver_Literal_Of__1___0_
+  commentId: M:NanoByte.SatSolver.Literal.Of``1(``0)
+  name.vb: Of(Of T)(T)
+  fullName: NanoByte.SatSolver.Literal.Of<T>(T)
+  fullName.vb: NanoByte.SatSolver.Literal.Of(Of T)(T)
+  nameWithType: Literal.Of<T>(T)
+  nameWithType.vb: Literal.Of(Of T)(T)
+- uid: NanoByte.SatSolver.Literal`1
+  name: Literal<T>
+  href: api/NanoByte.SatSolver.Literal-1.html
+  commentId: T:NanoByte.SatSolver.Literal`1
+  name.vb: Literal(Of T)
+  fullName: NanoByte.SatSolver.Literal<T>
+  fullName.vb: NanoByte.SatSolver.Literal(Of T)
+  nameWithType: Literal<T>
+  nameWithType.vb: Literal(Of T)
+- uid: NanoByte.SatSolver.Literal`1.#ctor(`0,System.Boolean)
+  name: Literal(T, bool)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1__ctor__0_System_Boolean_
+  commentId: M:NanoByte.SatSolver.Literal`1.#ctor(`0,System.Boolean)
+  name.vb: New(T, Boolean)
+  fullName: NanoByte.SatSolver.Literal<T>.Literal(T, bool)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).New(T, Boolean)
+  nameWithType: Literal<T>.Literal(T, bool)
+  nameWithType.vb: Literal(Of T).New(T, Boolean)
+- uid: NanoByte.SatSolver.Literal`1.#ctor*
+  name: Literal
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1__ctor_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: NanoByte.SatSolver.Literal<T>.Literal
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).New
+  nameWithType: Literal<T>.Literal
+  nameWithType.vb: Literal(Of T).New
+- uid: NanoByte.SatSolver.Literal`1.ConflictsWith(NanoByte.SatSolver.Literal{`0})
+  name: ConflictsWith(Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_ConflictsWith_NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.ConflictsWith(NanoByte.SatSolver.Literal{`0})
+  name.vb: ConflictsWith(Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.ConflictsWith(NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).ConflictsWith(NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.ConflictsWith(Literal<T>)
+  nameWithType.vb: Literal(Of T).ConflictsWith(Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.ConflictsWith*
+  name: ConflictsWith
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_ConflictsWith_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.ConflictsWith
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.ConflictsWith
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).ConflictsWith
+  nameWithType: Literal<T>.ConflictsWith
+  nameWithType.vb: Literal(Of T).ConflictsWith
+- uid: NanoByte.SatSolver.Literal`1.Equals(NanoByte.SatSolver.Literal{`0})
+  name: Equals(Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Equals_NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.Equals(NanoByte.SatSolver.Literal{`0})
+  name.vb: Equals(Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.Equals(NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Equals(NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.Equals(Literal<T>)
+  nameWithType.vb: Literal(Of T).Equals(Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.Equals(System.Object)
+  name: Equals(object?)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Equals_System_Object_
+  commentId: M:NanoByte.SatSolver.Literal`1.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: NanoByte.SatSolver.Literal<T>.Equals(object?)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Equals(Object)
+  nameWithType: Literal<T>.Equals(object?)
+  nameWithType.vb: Literal(Of T).Equals(Object)
+- uid: NanoByte.SatSolver.Literal`1.Equals*
+  name: Equals
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Equals_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.Equals
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.Equals
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Equals
+  nameWithType: Literal<T>.Equals
+  nameWithType.vb: Literal(Of T).Equals
+- uid: NanoByte.SatSolver.Literal`1.GetHashCode
+  name: GetHashCode()
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_GetHashCode
+  commentId: M:NanoByte.SatSolver.Literal`1.GetHashCode
+  fullName: NanoByte.SatSolver.Literal<T>.GetHashCode()
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).GetHashCode()
+  nameWithType: Literal<T>.GetHashCode()
+  nameWithType.vb: Literal(Of T).GetHashCode()
+- uid: NanoByte.SatSolver.Literal`1.GetHashCode*
+  name: GetHashCode
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_GetHashCode_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.GetHashCode
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.GetHashCode
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).GetHashCode
+  nameWithType: Literal<T>.GetHashCode
+  nameWithType.vb: Literal(Of T).GetHashCode
+- uid: NanoByte.SatSolver.Literal`1.IsPure(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{`0}})
+  name: IsPure(IEnumerable<Literal<T>>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_IsPure_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Literal__0___
+  commentId: M:NanoByte.SatSolver.Literal`1.IsPure(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{`0}})
+  name.vb: IsPure(IEnumerable(Of Literal(Of T)))
+  fullName: NanoByte.SatSolver.Literal<T>.IsPure(System.Collections.Generic.IEnumerable<NanoByte.SatSolver.Literal<T>>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).IsPure(System.Collections.Generic.IEnumerable(Of NanoByte.SatSolver.Literal(Of T)))
+  nameWithType: Literal<T>.IsPure(IEnumerable<Literal<T>>)
+  nameWithType.vb: Literal(Of T).IsPure(IEnumerable(Of Literal(Of T)))
+- uid: NanoByte.SatSolver.Literal`1.IsPure*
+  name: IsPure
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_IsPure_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.IsPure
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.IsPure
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).IsPure
+  nameWithType: Literal<T>.IsPure
+  nameWithType.vb: Literal(Of T).IsPure
+- uid: NanoByte.SatSolver.Literal`1.Negate
+  name: Negate()
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Negate
+  commentId: M:NanoByte.SatSolver.Literal`1.Negate
+  fullName: NanoByte.SatSolver.Literal<T>.Negate()
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Negate()
+  nameWithType: Literal<T>.Negate()
+  nameWithType.vb: Literal(Of T).Negate()
+- uid: NanoByte.SatSolver.Literal`1.Negate*
+  name: Negate
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Negate_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.Negate
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.Negate
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Negate
+  nameWithType: Literal<T>.Negate
+  nameWithType.vb: Literal(Of T).Negate
+- uid: NanoByte.SatSolver.Literal`1.Negated
+  name: Negated
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Negated
+  commentId: P:NanoByte.SatSolver.Literal`1.Negated
+  fullName: NanoByte.SatSolver.Literal<T>.Negated
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Negated
+  nameWithType: Literal<T>.Negated
+  nameWithType.vb: Literal(Of T).Negated
+- uid: NanoByte.SatSolver.Literal`1.Negated*
+  name: Negated
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Negated_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.Negated
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.Negated
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Negated
+  nameWithType: Literal<T>.Negated
+  nameWithType.vb: Literal(Of T).Negated
+- uid: NanoByte.SatSolver.Literal`1.ToString
+  name: ToString()
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_ToString
+  commentId: M:NanoByte.SatSolver.Literal`1.ToString
+  fullName: NanoByte.SatSolver.Literal<T>.ToString()
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).ToString()
+  nameWithType: Literal<T>.ToString()
+  nameWithType.vb: Literal(Of T).ToString()
+- uid: NanoByte.SatSolver.Literal`1.ToString*
+  name: ToString
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_ToString_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.ToString
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.ToString
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).ToString
+  nameWithType: Literal<T>.ToString
+  nameWithType.vb: Literal(Of T).ToString
+- uid: NanoByte.SatSolver.Literal`1.Value
+  name: Value
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Value
+  commentId: P:NanoByte.SatSolver.Literal`1.Value
+  fullName: NanoByte.SatSolver.Literal<T>.Value
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Value
+  nameWithType: Literal<T>.Value
+  nameWithType.vb: Literal(Of T).Value
+- uid: NanoByte.SatSolver.Literal`1.Value*
+  name: Value
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_Value_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.Value
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Literal<T>.Value
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Value
+  nameWithType: Literal<T>.Value
+  nameWithType.vb: Literal(Of T).Value
+- uid: NanoByte.SatSolver.Literal`1.op_BitwiseAnd(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name: operator &(Literal<T>, Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_BitwiseAnd_NanoByte_SatSolver_Literal__0__NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.op_BitwiseAnd(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name.vb: And(Literal(Of T), Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.operator &(NanoByte.SatSolver.Literal<T>, NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).And(NanoByte.SatSolver.Literal(Of T), NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.operator &(Literal<T>, Literal<T>)
+  nameWithType.vb: Literal(Of T).And(Literal(Of T), Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.op_BitwiseAnd*
+  name: operator &
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_BitwiseAnd_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.op_BitwiseAnd
+  isSpec: "True"
+  name.vb: And
+  fullName: NanoByte.SatSolver.Literal<T>.operator &
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).And
+  nameWithType: Literal<T>.operator &
+  nameWithType.vb: Literal(Of T).And
+- uid: NanoByte.SatSolver.Literal`1.op_BitwiseOr(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name: operator |(Literal<T>, Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_BitwiseOr_NanoByte_SatSolver_Literal__0__NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.op_BitwiseOr(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name.vb: Or(Literal(Of T), Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.operator |(NanoByte.SatSolver.Literal<T>, NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Or(NanoByte.SatSolver.Literal(Of T), NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.operator |(Literal<T>, Literal<T>)
+  nameWithType.vb: Literal(Of T).Or(Literal(Of T), Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.op_BitwiseOr*
+  name: operator |
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_BitwiseOr_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.op_BitwiseOr
+  isSpec: "True"
+  name.vb: Or
+  fullName: NanoByte.SatSolver.Literal<T>.operator |
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Or
+  nameWithType: Literal<T>.operator |
+  nameWithType.vb: Literal(Of T).Or
+- uid: NanoByte.SatSolver.Literal`1.op_Equality(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name: operator ==(Literal<T>, Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Equality_NanoByte_SatSolver_Literal__0__NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.op_Equality(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name.vb: =(Literal(Of T), Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.operator ==(NanoByte.SatSolver.Literal<T>, NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).=(NanoByte.SatSolver.Literal(Of T), NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.operator ==(Literal<T>, Literal<T>)
+  nameWithType.vb: Literal(Of T).=(Literal(Of T), Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.op_Equality*
+  name: operator ==
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Equality_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: NanoByte.SatSolver.Literal<T>.operator ==
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).=
+  nameWithType: Literal<T>.operator ==
+  nameWithType.vb: Literal(Of T).=
+- uid: NanoByte.SatSolver.Literal`1.op_Implicit(NanoByte.SatSolver.Literal{`0})~NanoByte.SatSolver.Clause{`0}
+  name: implicit operator Clause<T>(Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Implicit_NanoByte_SatSolver_Literal__0___NanoByte_SatSolver_Clause__0_
+  commentId: M:NanoByte.SatSolver.Literal`1.op_Implicit(NanoByte.SatSolver.Literal{`0})~NanoByte.SatSolver.Clause{`0}
+  name.vb: CType(Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.implicit operator NanoByte.SatSolver.Clause<T>(NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).CType(NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.implicit operator Clause<T>(Literal<T>)
+  nameWithType.vb: Literal(Of T).CType(Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.op_Implicit(`0)~NanoByte.SatSolver.Literal{`0}
+  name: implicit operator Literal<T>(T)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Implicit__0__NanoByte_SatSolver_Literal__0_
+  commentId: M:NanoByte.SatSolver.Literal`1.op_Implicit(`0)~NanoByte.SatSolver.Literal{`0}
+  name.vb: CType(T)
+  fullName: NanoByte.SatSolver.Literal<T>.implicit operator NanoByte.SatSolver.Literal<T>(T)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).CType(T)
+  nameWithType: Literal<T>.implicit operator Literal<T>(T)
+  nameWithType.vb: Literal(Of T).CType(T)
+- uid: NanoByte.SatSolver.Literal`1.op_Implicit*
+  name: implicit operator
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Implicit_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: NanoByte.SatSolver.Literal<T>.implicit operator
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).CType
+  nameWithType: Literal<T>.implicit operator
+  nameWithType.vb: Literal(Of T).CType
+- uid: NanoByte.SatSolver.Literal`1.op_Inequality(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name: operator !=(Literal<T>, Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Inequality_NanoByte_SatSolver_Literal__0__NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.op_Inequality(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0})
+  name.vb: <>(Literal(Of T), Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.operator !=(NanoByte.SatSolver.Literal<T>, NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).<>(NanoByte.SatSolver.Literal(Of T), NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.operator !=(Literal<T>, Literal<T>)
+  nameWithType.vb: Literal(Of T).<>(Literal(Of T), Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.op_Inequality*
+  name: operator !=
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_Inequality_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: NanoByte.SatSolver.Literal<T>.operator !=
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).<>
+  nameWithType: Literal<T>.operator !=
+  nameWithType.vb: Literal(Of T).<>
+- uid: NanoByte.SatSolver.Literal`1.op_LogicalNot(NanoByte.SatSolver.Literal{`0})
+  name: operator !(Literal<T>)
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_LogicalNot_NanoByte_SatSolver_Literal__0__
+  commentId: M:NanoByte.SatSolver.Literal`1.op_LogicalNot(NanoByte.SatSolver.Literal{`0})
+  name.vb: Not(Literal(Of T))
+  fullName: NanoByte.SatSolver.Literal<T>.operator !(NanoByte.SatSolver.Literal<T>)
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Not(NanoByte.SatSolver.Literal(Of T))
+  nameWithType: Literal<T>.operator !(Literal<T>)
+  nameWithType.vb: Literal(Of T).Not(Literal(Of T))
+- uid: NanoByte.SatSolver.Literal`1.op_LogicalNot*
+  name: operator !
+  href: api/NanoByte.SatSolver.Literal-1.html#NanoByte_SatSolver_Literal_1_op_LogicalNot_
+  commentId: Overload:NanoByte.SatSolver.Literal`1.op_LogicalNot
+  isSpec: "True"
+  name.vb: Not
+  fullName: NanoByte.SatSolver.Literal<T>.operator !
+  fullName.vb: NanoByte.SatSolver.Literal(Of T).Not
+  nameWithType: Literal<T>.operator !
+  nameWithType.vb: Literal(Of T).Not
+- uid: NanoByte.SatSolver.Solver`1
+  name: Solver<T>
+  href: api/NanoByte.SatSolver.Solver-1.html
+  commentId: T:NanoByte.SatSolver.Solver`1
+  name.vb: Solver(Of T)
+  fullName: NanoByte.SatSolver.Solver<T>
+  fullName.vb: NanoByte.SatSolver.Solver(Of T)
+  nameWithType: Solver<T>
+  nameWithType.vb: Solver(Of T)
+- uid: NanoByte.SatSolver.Solver`1.ChooseLiteral(NanoByte.SatSolver.Formula{`0})
+  name: ChooseLiteral(Formula<T>)
+  href: api/NanoByte.SatSolver.Solver-1.html#NanoByte_SatSolver_Solver_1_ChooseLiteral_NanoByte_SatSolver_Formula__0__
+  commentId: M:NanoByte.SatSolver.Solver`1.ChooseLiteral(NanoByte.SatSolver.Formula{`0})
+  name.vb: ChooseLiteral(Formula(Of T))
+  fullName: NanoByte.SatSolver.Solver<T>.ChooseLiteral(NanoByte.SatSolver.Formula<T>)
+  fullName.vb: NanoByte.SatSolver.Solver(Of T).ChooseLiteral(NanoByte.SatSolver.Formula(Of T))
+  nameWithType: Solver<T>.ChooseLiteral(Formula<T>)
+  nameWithType.vb: Solver(Of T).ChooseLiteral(Formula(Of T))
+- uid: NanoByte.SatSolver.Solver`1.ChooseLiteral*
+  name: ChooseLiteral
+  href: api/NanoByte.SatSolver.Solver-1.html#NanoByte_SatSolver_Solver_1_ChooseLiteral_
+  commentId: Overload:NanoByte.SatSolver.Solver`1.ChooseLiteral
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Solver<T>.ChooseLiteral
+  fullName.vb: NanoByte.SatSolver.Solver(Of T).ChooseLiteral
+  nameWithType: Solver<T>.ChooseLiteral
+  nameWithType.vb: Solver(Of T).ChooseLiteral
+- uid: NanoByte.SatSolver.Solver`1.IsSatisfiable(NanoByte.SatSolver.Formula{`0})
+  name: IsSatisfiable(Formula<T>)
+  href: api/NanoByte.SatSolver.Solver-1.html#NanoByte_SatSolver_Solver_1_IsSatisfiable_NanoByte_SatSolver_Formula__0__
+  commentId: M:NanoByte.SatSolver.Solver`1.IsSatisfiable(NanoByte.SatSolver.Formula{`0})
+  name.vb: IsSatisfiable(Formula(Of T))
+  fullName: NanoByte.SatSolver.Solver<T>.IsSatisfiable(NanoByte.SatSolver.Formula<T>)
+  fullName.vb: NanoByte.SatSolver.Solver(Of T).IsSatisfiable(NanoByte.SatSolver.Formula(Of T))
+  nameWithType: Solver<T>.IsSatisfiable(Formula<T>)
+  nameWithType.vb: Solver(Of T).IsSatisfiable(Formula(Of T))
+- uid: NanoByte.SatSolver.Solver`1.IsSatisfiable*
+  name: IsSatisfiable
+  href: api/NanoByte.SatSolver.Solver-1.html#NanoByte_SatSolver_Solver_1_IsSatisfiable_
+  commentId: Overload:NanoByte.SatSolver.Solver`1.IsSatisfiable
+  isSpec: "True"
+  fullName: NanoByte.SatSolver.Solver<T>.IsSatisfiable
+  fullName.vb: NanoByte.SatSolver.Solver(Of T).IsSatisfiable
+  nameWithType: Solver<T>.IsSatisfiable
+  nameWithType.vb: Solver(Of T).IsSatisfiable

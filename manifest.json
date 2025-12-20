@@ -1,0 +1,153 @@
+{
+  "source_base_path": "/home/runner/work/sat-solver/sat-solver/doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Clause-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Clause-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver.Clause<T>",
+      "Summary": "<p sourcefile=\"api/NanoByte.SatSolver.Clause-1.yml\" sourcestartlinenumber=\"1\">A Boolean Clause. Consists of a set of <xref href=\"NanoByte.SatSolver.Literal%601\" data-throw-if-not-resolved=\"false\"></xref>s of which at least one must be true.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Clauses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Clauses.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver.Clauses",
+      "Summary": "<p sourcefile=\"api/NanoByte.SatSolver.Clauses.yml\" sourcestartlinenumber=\"1\">Static factory methods for <xref href=\"NanoByte.SatSolver.Clause%601\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Formula-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Formula-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver.Formula<T>",
+      "Summary": "<p sourcefile=\"api/NanoByte.SatSolver.Formula-1.yml\" sourcestartlinenumber=\"1\">A Boolean Formula. Consists of a set of <xref href=\"NanoByte.SatSolver.Clause%601\" data-throw-if-not-resolved=\"false\"></xref>s which all must be true.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Literal-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Literal-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver.Literal<T>",
+      "Summary": "<p sourcefile=\"api/NanoByte.SatSolver.Literal-1.yml\" sourcestartlinenumber=\"1\">A Boolean Literal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Literal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Literal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver.Literal",
+      "Summary": "<p sourcefile=\"api/NanoByte.SatSolver.Literal.yml\" sourcestartlinenumber=\"1\">Factory methods for <xref href=\"NanoByte.SatSolver.Literal%601\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.Solver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.Solver-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver.Solver<T>",
+      "Summary": "<p sourcefile=\"api/NanoByte.SatSolver.Solver-1.yml\" sourcestartlinenumber=\"1\">A Boolean Satisfiability Solver.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NanoByte.SatSolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NanoByte.SatSolver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NanoByte.SatSolver",
+      "Summary": "\n<p sourcefile=\"../src/SatSolver/_Namespace.md\" sourcestartlinenumber=\"5\">DPLL Boolean Satisfiability Solver.</p>\n"
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

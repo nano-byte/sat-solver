@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Home | NanoByte SAT Solver </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Home | NanoByte SAT Solver ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nano-byte/sat-solver/blob/0.4.0/doc/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="nanobyte-sat-solver">NanoByte SAT Solver</h1>
+
+<p>NanoByte SAT Solver is a DPLL Boolean Satisfiability Solver for .NET.</p>
+<h2 id="usage">Usage</h2>
+<p>Add a reference to the <a href="https://www.nuget.org/packages/NanoByte.SatSolver/">NanoByte.SatSolver</a> NuGet package to your project. It is available for .NET Framework 2.0+ and .NET Standard 1.0+.</p>
+<p>You need to choose the underlying type to use for <a class="xref" href="api/NanoByte.SatSolver.Literal-1.html">Literals</a> in Boolean Formulas. This will often be <code>int</code> or <code>string</code> but you can also use any other type that implements the <code>IEquatable&lt;T&gt;</code> interface. You can then create an instance of <a class="xref" href="api/NanoByte.SatSolver.Solver-1.html">Solver&lt;T&gt;</a>:</p>
+<pre><code class="lang-csharp">var solver = new Solver&lt;string&gt;();
+</code></pre>
+<p>The library enables you to express Boolean <a class="xref" href="api/NanoByte.SatSolver.Formula-1.html">Formulas</a> using implicit casting and operators for human-friendly sample and test code:</p>
+<pre><code class="lang-csharp">Literal&lt;string&gt; a = &quot;a&quot;, b = &quot;b&quot;, c = &quot;c&quot;, d = &quot;d&quot;;
+var formula = (a | b) &amp; (!a | c) &amp; (!c | d) &amp; a;
+</code></pre>
+<p>For constructing Formulas at run-time you can use a collection-like interface instead:</p>
+<pre><code class="lang-csharp">var formula = new Formula&lt;string&gt;
+{
+    new Clause&lt;string&gt; {Literal.Of(&quot;a&quot;), Literal.Of(&quot;b&quot;)},
+    new Clause&lt;string&gt; {Literal.Of(&quot;a&quot;).Negate(), Literal.Of(&quot;c&quot;)},
+    new Clause&lt;string&gt; {Literal.Of(&quot;c&quot;).Negate(), Literal.Of(&quot;d&quot;)},
+    new Clause&lt;string&gt; {Literal.Of(&quot;a&quot;)}
+};
+</code></pre>
+<p>Finally, you can use the solver to determine whether a Formula is satisfiable:</p>
+<pre><code class="lang-csharp">bool result = solver.IsSatisfiable(formula);
+</code></pre>
+<p>When the Solver needs to choose a Literal to assign a truth value to during backtracking, it simply picks the first unset Literal from the list. You can replace this with your own domain-specific logic for better performance by deriving from <a class="xref" href="api/NanoByte.SatSolver.Solver-1.html">Solver&lt;T&gt;</a> and overriding the <a class="xref" href="api/NanoByte.SatSolver.Solver-1.html#NanoByte_SatSolver_Solver_1_ChooseLiteral_NanoByte_SatSolver_Formula__0__">ChooseLiteral()</a> method.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nano-byte/sat-solver/blob/0.4.0/doc/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright Bastian Eicher
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
