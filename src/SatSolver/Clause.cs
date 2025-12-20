@@ -51,7 +51,7 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
         => [clause1, clause2];
 
     /// <summary>
-    /// Returns a negated copy of this Clause without the specified <paramref name="literal"/>.
+    /// Returns a copy of this Clause without the specified <paramref name="literal"/>.
     /// </summary>
     public Clause<T> Without(Literal<T> literal)
         => new(this.Where(x => x != literal));
