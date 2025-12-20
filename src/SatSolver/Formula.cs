@@ -123,5 +123,5 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
         => obj is Formula<T> other && Equals(other);
 
     public override int GetHashCode()
-        => this.Aggregate(397, (current, clause) => current ^ clause.GetHashCode());
+        => this.Aggregate(397, HashCode.Combine);
 }

@@ -78,5 +78,5 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
         => obj is Clause<T> other && Equals(other);
 
     public override int GetHashCode()
-        => this.Aggregate(397, (current, literal) => current ^ literal.GetHashCode());
+        => this.Aggregate(397, HashCode.Combine);
 }
