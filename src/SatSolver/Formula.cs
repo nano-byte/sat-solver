@@ -57,11 +57,27 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
     {
         get
         {
-            if (this.Any(clause => !clause.IsUnit)) return false;
-
-            var literals = GetLiterals().ToList();
-            return literals.All(literal => literal.IsPure(literals));
+            var assigned = new Dictionary<T, bool>();
+            foreach (var clause in this)
+            {
+                if (!clause.IsUnit) return false; // Only unit clauses allowed
+                var literal = clause.First();
+                if (assigned.TryGetValue(literal.Value, out bool existing))
+                {
+                    if (existing != !literal.Negated) return false; // Conflict detected
+                }
+                else
+                {
+                    assigned[literal.Value] = !literal.Negated; // Store literal's value
+                }
+            }
+            return true;
         }
+    }
+
+    private struct Polarity
+    {
+        public bool Positive, Negative;
     }
 
     /// <summary>
@@ -69,8 +85,25 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
     /// </summary>
     public IEnumerable<Literal<T>> GetPureLiterals()
     {
-        var literals = GetLiterals().ToList();
-        return literals.Where(literal => literal.IsPure(literals));
+        var map = new Dictionary<T, Polarity>();
+
+        foreach (var clause in this)
+        foreach (var lit in clause)
+        {
+            if (!map.TryGetValue(lit.Value, out var entry))
+                entry = new();
+
+            if (lit.Negated) entry.Negative = true;
+            else entry.Positive = true;
+
+            map[lit.Value] = entry;
+        }
+
+        foreach (var entry in map)
+        {
+            if (entry.Value.Positive ^ entry.Value.Negative) // exactly one polarity
+                yield return new(entry.Key, entry.Value.Negative);
+        }
     }
 
     /// <summary>
@@ -84,14 +117,14 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
     /// </summary>
     public Formula<T> Simplify()
     {
-        Formula<T> previous, result = this;
-        do
+        var current = this;
+        while (true)
         {
-            previous = result;
-            result = previous.PropagateUnits()
-                             .EliminatePureLiterals();
-        } while (!result.Equals(previous));
-        return result;
+            var simplified= current.PropagateUnits().EliminatePureLiterals();
+            if (simplified.Count == current.Count && simplified.All(current.Contains))
+                return current;
+            current = simplified;
+        }
     }
 
     /// <summary>
@@ -109,8 +142,10 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
     /// </summary>
     internal Formula<T> EliminatePureLiterals()
     {
-        var pureLiterals = GetPureLiterals();
-        return new(this.Where(clause => !pureLiterals.Any(clause.Contains)));
+        var pureSet = new HashSet<Literal<T>>(GetPureLiterals());
+        return pureSet.Count == 0
+            ? this
+            : new(this.Where(clause => !clause.Any(pureSet.Contains)));
     }
 
     public override string ToString()
