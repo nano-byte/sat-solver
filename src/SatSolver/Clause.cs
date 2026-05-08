@@ -32,7 +32,7 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
     /// <param name="clause">The existing Clause.</param>
     /// <param name="literal">The additional Literal.</param>
     public static Clause<T> operator |(Clause<T> clause, Literal<T> literal)
-        => new(clause) {literal};
+        => [..clause, literal];
 
     /// <summary>
     /// Creates a <see cref="Clause{T}"/> consisting of all Literals from an existing Clause plus an additional <see cref="Literal{T}"/>.
@@ -40,7 +40,7 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
     /// <param name="literal">The additional Literal.</param>
     /// <param name="clause">The existing Clause.</param>
     public static Clause<T> operator |(Literal<T> literal, Clause<T> clause)
-        => new(clause) {literal};
+        => [..clause, literal];
 
     /// <summary>
     /// Creates a <see cref="Formula{T}"/> consisting of two <see cref="Clause{T}"/>s.
