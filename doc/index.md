@@ -4,38 +4,72 @@ title: Home
 
 # NanoByte SAT Solver
 
-NanoByte SAT Solver is a DPLL Boolean Satisfiability Solver for .NET.
+NanoByte SAT Solver is a CDCL Boolean Satisfiability Solver for .NET.
 
 ## Usage
 
 Add a reference to the [NanoByte.SatSolver](https://www.nuget.org/packages/NanoByte.SatSolver/) NuGet package to your project. It is available for .NET Framework 2.0+ and .NET Standard 1.0+.
 
-You need to choose the underlying type to use for [Literals](xref:NanoByte.SatSolver.Literal`1) in Boolean Formulas. This will often be `int` or `string` but you can also use any other type that implements the `IEquatable<T>` interface. You can then create an instance of <xref:NanoByte.SatSolver.Solver`1>:
+You need to choose the underlying type to use for [Literals](xref:NanoByte.SatSolver.Literal`1) in Boolean Formulas. This will often be `int` or `string` but you can also use any other type that implements the `IEquatable<T>` interface. Create an instance of <xref:NanoByte.SatSolver.SatProblem`1> and declare your variables:
 
 ```csharp
-var solver = new Solver<string>();
+var problem = new SatProblem<string>();
+
+var a = problem.AddVariable("a");
+var b = problem.AddVariable("b");
+var c = problem.AddVariable("c");
+var d = problem.AddVariable("d");
 ```
 
-The library enables you to express Boolean [Formulas](xref:NanoByte.SatSolver.Formula`1) using implicit casting and operators for human-friendly sample and test code:
+Add constraints as clauses (disjunctions of literals where at least one must be true). The `!` operator negates a [Literal](xref:NanoByte.SatSolver.Literal`1):
+
 ```csharp
-Literal<string> a = "a", b = "b", c = "c", d = "d";
-var formula = (a | b) & (!a | c) & (!c | d) & a;
+problem.AddClause(a, b);   // a OR b
+problem.AddClause(!a, c);  // NOT a OR c
+problem.AddClause(!c, d);  // NOT c OR d
+problem.AddClause(a);      // a must be true (unit clause / unconditional fact)
 ```
 
-For constructing Formulas at run-time you can use a collection-like interface instead:
+You can also use `|` and `&` operator expressions with `+=` to add multiple clauses at once in a compact form:
+
 ```csharp
-var formula = new Formula<string>
+problem += (a | b) & (!a | c) & (!c | d) & a;
+```
+
+For common implication patterns there is a dedicated helper:
+
+```csharp
+problem.Implies(a, c);  // a implies c  (equivalent to: NOT a OR c)
+problem.Implies(c, d);  // c implies d
+```
+
+You can also add an at-most-one constraint to express that no two literals in a group may be true simultaneously:
+
+```csharp
+problem.AtMostOne(a, b, c);
+```
+
+Call `Solve()` to find a satisfying assignment. It returns `null` when the problem is unsatisfiable:
+
+```csharp
+Model<string>? model = problem.Solve();
+if (model != null)
 {
-    new Clause<string> {Literal.Of("a"), Literal.Of("b")},
-    new Clause<string> {Literal.Of("a").Negate(), Literal.Of("c")},
-    new Clause<string> {Literal.Of("c").Negate(), Literal.Of("d")},
-    new Clause<string> {Literal.Of("a")}
-};
+    // Satisfiable: inspect which variables were assigned true
+    foreach (var value in model.SelectedValues)
+        Console.WriteLine($"{value} = true");
+
+    // Or query a specific variable
+    bool? aValue = model["a"];
+}
 ```
 
-Finally, you can use the solver to determine whether a Formula is satisfiable:
+When the solver needs to choose which unassigned variable to branch on next, it picks one arbitrarily. You can supply a `decider` callback to <xref:NanoByte.SatSolver.SatProblem`1.Solve*> with domain-specific branching logic for better performance:
+
 ```csharp
-bool result = solver.IsSatisfiable(formula);
+Model<string>? model = problem.Solve(decider: () =>
+{
+    // Return a preferred literal to branch on, or null to let the solver decide
+    return somePreferredLiteral;
+})
 ```
-
-When the Solver needs to choose a Literal to assign a truth value to during backtracking, it simply picks the first unset Literal from the list. You can replace this with your own domain-specific logic for better performance by deriving from <xref:NanoByte.SatSolver.Solver`1> and overriding the [ChooseLiteral()](xref:NanoByte.SatSolver.Solver`1#NanoByte_SatSolver_Solver_1_ChooseLiteral_NanoByte_SatSolver_Formula__0__) method.

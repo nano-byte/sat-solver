@@ -1,4 +1,4 @@
 ---
 uid: NanoByte.SatSolver
-summary: DPLL Boolean Satisfiability Solver.
+summary: CDCL Boolean Satisfiability Solver.
 ---

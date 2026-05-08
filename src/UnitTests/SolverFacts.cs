@@ -6,6 +6,7 @@ using Xunit;
 
 namespace NanoByte.SatSolver;
 
+#pragma warning disable CS0618 // Tests for an obsolete class
 public class SolverFacts
 {
     [Fact]
