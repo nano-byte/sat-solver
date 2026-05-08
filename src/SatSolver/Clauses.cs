@@ -39,7 +39,7 @@ public static class Clauses
     public static IEnumerable<Clause<T>> ExactlyOne<T>(params Literal<T>[] literals)
         where T : IEquatable<T>
     {
-        yield return new Clause<T>(literals);
+        yield return new(literals);
         foreach (var clause in AtMostOne(literals))
             yield return clause;
     }
