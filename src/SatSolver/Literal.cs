@@ -11,30 +11,20 @@ namespace NanoByte.SatSolver;
 /// A Boolean Literal.
 /// </summary>
 /// <typeparam name="T">The underlying type used to identify/compare Literals.</typeparam>
-public readonly struct Literal<T> : IEquatable<Literal<T>>
+/// <param name="value">The underlying value used to identify/compare Literals.</param>
+/// <param name="negated">Indicates whether this Literal has been negated.</param>
+public readonly struct Literal<T>(T value, bool negated = false) : IEquatable<Literal<T>>
     where T : IEquatable<T>
 {
     /// <summary>
     /// The underlying value used to identify/compare Literals.
     /// </summary>
-    public T Value { get; }
+    public T Value { get; } = value;
 
     /// <summary>
     /// Indicates whether this Literal has been negated.
     /// </summary>
-    public bool Negated { get; }
-
-    /// <summary>
-    /// Creates a Literal.
-    /// </summary>
-    /// <param name="value">The underlying value used to identify/compare Literals.</param>
-    /// <param name="negated">Indicates whether this Literal has been negated.</param>
-    public Literal(T value, bool negated = false)
-    {
-        if (value == null) throw new ArgumentNullException(nameof(value));
-        Value = value;
-        Negated = negated;
-    }
+    public bool Negated { get; } = negated;
 
     /// <summary>
     /// Creates a <see cref="Literal{T}"/>.
