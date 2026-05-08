@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Home | NanoByte SAT Solver </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Home | NanoByte SAT Solver ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nano-byte/sat-solver/blob/0.5.0/doc/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="nanobyte-sat-solver">NanoByte SAT Solver</h1>
+
+<p>NanoByte SAT Solver is a CDCL Boolean Satisfiability Solver for .NET.</p>
+<h2 id="usage">Usage</h2>
+<p>Add a reference to the <a href="https://www.nuget.org/packages/NanoByte.SatSolver/">NanoByte.SatSolver</a> NuGet package to your project. It is available for .NET Framework 2.0+ and .NET Standard 1.0+.</p>
+<p>You need to choose the underlying type to use for <a class="xref" href="api/NanoByte.SatSolver.Literal-1.html">Literals</a> in Boolean Formulas. This will often be <code>int</code> or <code>string</code> but you can also use any other type that implements the <code>IEquatable&lt;T&gt;</code> interface. Create an instance of <a class="xref" href="api/NanoByte.SatSolver.SatProblem-1.html">SatProblem&lt;T&gt;</a> and declare your variables:</p>
+<pre><code class="lang-csharp">var problem = new SatProblem&lt;string&gt;();
+
+var a = problem.AddVariable(&quot;a&quot;);
+var b = problem.AddVariable(&quot;b&quot;);
+var c = problem.AddVariable(&quot;c&quot;);
+var d = problem.AddVariable(&quot;d&quot;);
+</code></pre>
+<p>Add constraints as clauses (disjunctions of literals where at least one must be true). The <code>!</code> operator negates a <a class="xref" href="api/NanoByte.SatSolver.Literal-1.html">Literal</a>:</p>
+<pre><code class="lang-csharp">problem.AddClause(a, b);   // a OR b
+problem.AddClause(!a, c);  // NOT a OR c
+problem.AddClause(!c, d);  // NOT c OR d
+problem.AddClause(a);      // a must be true (unit clause / unconditional fact)
+</code></pre>
+<p>You can also use <code>|</code> and <code>&amp;</code> operator expressions with <code>+=</code> to add multiple clauses at once in a compact form:</p>
+<pre><code class="lang-csharp">problem += (a | b) &amp; (!a | c) &amp; (!c | d) &amp; a;
+</code></pre>
+<p>For common implication patterns there is a dedicated helper:</p>
+<pre><code class="lang-csharp">problem.Implies(a, c);  // a implies c  (equivalent to: NOT a OR c)
+problem.Implies(c, d);  // c implies d
+</code></pre>
+<p>You can also add an at-most-one constraint to express that no two literals in a group may be true simultaneously:</p>
+<pre><code class="lang-csharp">problem.AtMostOne(a, b, c);
+</code></pre>
+<p>Call <code>Solve()</code> to find a satisfying assignment. It returns <code>null</code> when the problem is unsatisfiable:</p>
+<pre><code class="lang-csharp">Model&lt;string&gt;? model = problem.Solve();
+if (model != null)
+{
+    // Satisfiable: inspect which variables were assigned true
+    foreach (var value in model.SelectedValues)
+        Console.WriteLine($&quot;{value} = true&quot;);
+
+    // Or query a specific variable
+    bool? aValue = model[&quot;a&quot;];
+}
+</code></pre>
+<p>When the solver needs to choose which unassigned variable to branch on next, it picks one arbitrarily. You can supply a <code>decider</code> callback to <a class="xref" href="api/NanoByte.SatSolver.SatProblem-1.html#NanoByte_SatSolver_SatProblem_1_Solve_">Solve</a> with domain-specific branching logic for better performance:</p>
+<pre><code class="lang-csharp">Model&lt;string&gt;? model = problem.Solve(decider: () =&gt;
+{
+    // Return a preferred literal to branch on, or null to let the solver decide
+    return somePreferredLiteral;
+})
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nano-byte/sat-solver/blob/0.5.0/doc/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright Bastian Eicher
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SatProblem&lt;T&gt; | NanoByte SAT Solver </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SatProblem&lt;T&gt; | NanoByte SAT Solver ">
+      
+      <meta name="description" content="A mutable SAT problem builder.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nano-byte/sat-solver/new/0.5.0/apiSpec/new?filename=NanoByte_SatSolver_SatProblem_1.md&amp;value=---%0Auid%3A%20NanoByte.SatSolver.SatProblem%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NanoByte.SatSolver.SatProblem`1">
+
+
+
+  <h1 id="NanoByte_SatSolver_SatProblem_1" data-uid="NanoByte.SatSolver.SatProblem`1" class="text-break">
+Class SatProblem&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NanoByte.html">NanoByte</a>.<a class="xref" href="NanoByte.SatSolver.html">SatSolver</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NanoByte.SatSolver.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A mutable SAT problem builder.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SatProblem&lt;T&gt; where T : IEquatable&lt;T&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The user-data type used to identify variables. Each distinct value gets one Boolean variable.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">SatProblem&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 id="NanoByte_SatSolver_SatProblem_1_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Allocate variables for the values you care about, add clauses and other constraints, then call <a class="xref" href="NanoByte.SatSolver.SatProblem-1.html#NanoByte_SatSolver_SatProblem_1_Solve_System_Func_System_Nullable_NanoByte_SatSolver_Literal__0____">Solve(Func&lt;Literal&lt;T&gt;?&gt;?)</a> to obtain a satisfying assignment (or <code>null</code> if unsatisfiable).</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_AddClause_" data-uid="NanoByte.SatSolver.SatProblem`1.AddClause*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_AddClause_NanoByte_SatSolver_Literal__0____" data-uid="NanoByte.SatSolver.SatProblem`1.AddClause(NanoByte.SatSolver.Literal{`0}[])">
+  AddClause(params Literal&lt;T&gt;[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a clause requiring at least one of <code class="paramref">literals</code> to be true.
+An empty clause makes the problem unsatisfiable. A single literal becomes an unconditional fact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddClause(params Literal&lt;T&gt;[] literals)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>literals</code> <a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_AddClause_" data-uid="NanoByte.SatSolver.SatProblem`1.AddClause*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_AddClause_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Literal__0___" data-uid="NanoByte.SatSolver.SatProblem`1.AddClause(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{`0}})">
+  AddClause(IEnumerable&lt;Literal&lt;T&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a clause requiring at least one of <code class="paramref">literals</code> to be true.
+An empty clause makes the problem unsatisfiable. A single literal becomes an unconditional fact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddClause(IEnumerable&lt;Literal&lt;T&gt;&gt; literals)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>literals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_AddFormula_" data-uid="NanoByte.SatSolver.SatProblem`1.AddFormula*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_AddFormula_NanoByte_SatSolver_Formula__0__" data-uid="NanoByte.SatSolver.SatProblem`1.AddFormula(NanoByte.SatSolver.Formula{`0})">
+  AddFormula(Formula&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds all clauses from <code class="paramref">formula</code> to the problem.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFormula(Formula&lt;T&gt; formula)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>formula</code> <a class="xref" href="NanoByte.SatSolver.Formula-1.html">Formula</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_AddVariable_" data-uid="NanoByte.SatSolver.SatProblem`1.AddVariable*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_AddVariable__0_" data-uid="NanoByte.SatSolver.SatProblem`1.AddVariable(`0)">
+  AddVariable(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the literal for <code class="paramref">value</code>, allocating a new variable on first use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Literal&lt;T&gt; AddVariable(T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_AtMostOne_" data-uid="NanoByte.SatSolver.SatProblem`1.AtMostOne*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_AtMostOne_NanoByte_SatSolver_Literal__0____" data-uid="NanoByte.SatSolver.SatProblem`1.AtMostOne(NanoByte.SatSolver.Literal{`0}[])">
+  AtMostOne(params Literal&lt;T&gt;[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an at-most-one constraint over the given literals. Returns the constraint object so callers (e.g., deciders) can query it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AtMostOneConstraint&lt;T&gt; AtMostOne(params Literal&lt;T&gt;[] literals)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>literals</code> <a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NanoByte.SatSolver.AtMostOneConstraint-1.html">AtMostOneConstraint</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_AtMostOne_" data-uid="NanoByte.SatSolver.SatProblem`1.AtMostOne*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_AtMostOne_System_Collections_Generic_IEnumerable_NanoByte_SatSolver_Literal__0___" data-uid="NanoByte.SatSolver.SatProblem`1.AtMostOne(System.Collections.Generic.IEnumerable{NanoByte.SatSolver.Literal{`0}})">
+  AtMostOne(IEnumerable&lt;Literal&lt;T&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an at-most-one constraint over the given literals. Returns the constraint object so callers (e.g., deciders) can query it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AtMostOneConstraint&lt;T&gt; AtMostOne(IEnumerable&lt;Literal&lt;T&gt;&gt; literals)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>literals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NanoByte.SatSolver.AtMostOneConstraint-1.html">AtMostOneConstraint</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_GetValue_" data-uid="NanoByte.SatSolver.SatProblem`1.GetValue*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_GetValue_NanoByte_SatSolver_Literal__0__" data-uid="NanoByte.SatSolver.SatProblem`1.GetValue(NanoByte.SatSolver.Literal{`0})">
+  GetValue(Literal&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the current truth value of <code class="paramref">literal</code> in the engine, or <code>null</code> if it has not yet been assigned. Useful from inside a decider callback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? GetValue(Literal&lt;T&gt; literal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>literal</code> <a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_Implies_" data-uid="NanoByte.SatSolver.SatProblem`1.Implies*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_Implies_NanoByte_SatSolver_Literal__0__NanoByte_SatSolver_Literal__0____" data-uid="NanoByte.SatSolver.SatProblem`1.Implies(NanoByte.SatSolver.Literal{`0},NanoByte.SatSolver.Literal{`0}[])">
+  Implies(Literal&lt;T&gt;, params Literal&lt;T&gt;[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the implication <code class="paramref">antecedent</code> → at-least-one-of(<code class="paramref">consequents</code>).
+Equivalent to a clause: <code>!antecedent ∨ c1 ∨ c2 ∨ ...</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Implies(Literal&lt;T&gt; antecedent, params Literal&lt;T&gt;[] consequents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>antecedent</code> <a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>consequents</code> <a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_Solve_" data-uid="NanoByte.SatSolver.SatProblem`1.Solve*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_Solve_System_Func_System_Nullable_NanoByte_SatSolver_Literal__0____" data-uid="NanoByte.SatSolver.SatProblem`1.Solve(System.Func{System.Nullable{NanoByte.SatSolver.Literal{`0}}})">
+  Solve(Func&lt;Literal&lt;T&gt;?&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Solves the problem.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Model&lt;T&gt;? Solve(Func&lt;Literal&lt;T&gt;?&gt;? decider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>decider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="NanoByte.SatSolver.Literal-1.html">Literal</a>&lt;T&gt;?&gt;</dt>
+    <dd><p>Optional callback to choose the next literal to branch on. Returning <code>null</code> means &quot;no preference; set remaining variables to false&quot;.
+The callback receives no arguments; it should inspect external state (e.g., a dependency graph) plus any held <a class="xref" href="NanoByte.SatSolver.AtMostOneConstraint-1.html">AtMostOneConstraint&lt;T&gt;</a> references to decide.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NanoByte.SatSolver.Model-1.html">Model</a>&lt;T&gt;</dt>
+    <dd><p>A model with the satisfying assignment, or <code>null</code> if the problem is unsatisfiable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_op_Addition_" data-uid="NanoByte.SatSolver.SatProblem`1.op_Addition*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_op_Addition_NanoByte_SatSolver_SatProblem__0__NanoByte_SatSolver_Clause__0__" data-uid="NanoByte.SatSolver.SatProblem`1.op_Addition(NanoByte.SatSolver.SatProblem{`0},NanoByte.SatSolver.Clause{`0})">
+  operator +(SatProblem&lt;T&gt;, Clause&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a clause to the problem. Enables <code>problem += literal1 | literal2</code> syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SatProblem&lt;T&gt; operator +(SatProblem&lt;T&gt; problem, Clause&lt;T&gt; clause)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>problem</code> <a class="xref" href="NanoByte.SatSolver.SatProblem-1.html">SatProblem</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>clause</code> <a class="xref" href="NanoByte.SatSolver.Clause-1.html">Clause</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NanoByte.SatSolver.SatProblem-1.html">SatProblem</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NanoByte_SatSolver_SatProblem_1_op_Addition_" data-uid="NanoByte.SatSolver.SatProblem`1.op_Addition*"></a>
+
+  <h3 id="NanoByte_SatSolver_SatProblem_1_op_Addition_NanoByte_SatSolver_SatProblem__0__NanoByte_SatSolver_Formula__0__" data-uid="NanoByte.SatSolver.SatProblem`1.op_Addition(NanoByte.SatSolver.SatProblem{`0},NanoByte.SatSolver.Formula{`0})">
+  operator +(SatProblem&lt;T&gt;, Formula&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds all clauses from a formula to the problem. Enables <code>problem += (a | b) &amp; (!a | c)</code> syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SatProblem&lt;T&gt; operator +(SatProblem&lt;T&gt; problem, Formula&lt;T&gt; formula)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>problem</code> <a class="xref" href="NanoByte.SatSolver.SatProblem-1.html">SatProblem</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>formula</code> <a class="xref" href="NanoByte.SatSolver.Formula-1.html">Formula</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NanoByte.SatSolver.SatProblem-1.html">SatProblem</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nano-byte/sat-solver/blob/0.5.0/src/SatSolver/SatProblem.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright Bastian Eicher
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
