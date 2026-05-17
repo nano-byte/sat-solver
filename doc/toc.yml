@@ -1,4 +1,8 @@
 - name: Home
   href: index.md
+- name: Advanced usage
+  href: advanced.md
+- name: Building formulas
+  href: formulas.md
 - name: API
   href: api/
