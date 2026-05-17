@@ -54,12 +54,15 @@ Call `Solve()` to find a satisfying assignment. It returns `null` when the probl
 Model<string>? model = problem.Solve();
 if (model != null)
 {
-    // Satisfiable: inspect which variables were assigned true
-    foreach (var value in model.SelectedValues)
-        Console.WriteLine($"{value} = true");
+    // Query a specific variable by its underlying value
+    bool? aValue = model["a"];   // true, false, or null if never constrained
 
-    // Or query a specific variable
-    bool? aValue = model["a"];
+    // Iterate the variables you care about
+    foreach (var lit in new[] {a, b, c, d})
+    {
+        if (model[lit.Value] == true)
+            Console.WriteLine($"{lit.Value} = true");
+    }
 }
 ```
 
