@@ -21,7 +21,7 @@ public class Clause<T> : HashSet<Literal<T>>, IEquatable<Clause<T>>
     {}
 
     /// <summary>
-    /// Creates a Clause consisting the specified <paramref name="literals"/>.
+    /// Creates a Clause consisting of the specified <paramref name="literals"/>.
     /// </summary>
     public Clause(IEnumerable<Literal<T>> literals) : base(literals)
     {}

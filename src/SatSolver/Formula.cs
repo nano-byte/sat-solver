@@ -22,7 +22,7 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
     {}
 
     /// <summary>
-    /// Creates a Formula consisting the specified <paramref name="clauses"/>.
+    /// Creates a Formula consisting of the specified <paramref name="clauses"/>.
     /// </summary>
     public Formula(IEnumerable<Clause<T>> clauses)
         : base(clauses)
@@ -51,7 +51,7 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
         => this.Any(clause => clause.IsEmpty);
 
     /// <summary>
-    /// Indicates whether this Formula is a consistent set of Literals, i.e. consists only non-conflicting Unit Clauses.
+    /// Indicates whether this Formula is a consistent set of Literals, i.e. consists only of non-conflicting Unit Clauses.
     /// </summary>
     public bool IsConsistent
     {
@@ -138,7 +138,7 @@ public class Formula<T> : HashSet<Clause<T>>, IEquatable<Formula<T>>
                                .Select(clause => clause.Without(!literal))));
 
     /// <summary>
-    /// Returns a copy of the Formula simplified by remove all Clauses that contain Pure Literals.
+    /// Returns a copy of the Formula simplified by removing all Clauses that contain Pure Literals.
     /// </summary>
     internal Formula<T> EliminatePureLiterals()
     {
