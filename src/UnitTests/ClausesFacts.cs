@@ -1,7 +1,7 @@
 // Copyright Bastian Eicher
 // Licensed under the MIT License
 
-using FluentAssertions;
+using AwesomeAssertions;
 using Xunit;
 
 namespace NanoByte.SatSolver;

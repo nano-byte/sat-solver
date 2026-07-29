@@ -13,10 +13,6 @@
       "automergeType": "branch"
     },
     {
-      "matchPackageNames": ["FluentAssertions"],
-      "allowedVersions": "<8"
-    },
-    {
       "matchPackagePatterns": ["docfx", "SourceLink"],
       "automerge": true,
       "automergeType": "branch"
