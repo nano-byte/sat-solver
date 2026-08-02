@@ -6,6 +6,7 @@
     <TargetFrameworks>net472;net10.0</TargetFrameworks>
     <IsPackable>False</IsPackable>
     <DeterministicSourcePaths>False</DeterministicSourcePaths>
+    <VSTestLogger>trx%3bLogFileName=$(TargetFramework).trx</VSTestLogger>
   </PropertyGroup>
 
   <!-- Mark as unit test project -->
