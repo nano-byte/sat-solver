@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Building formulas with operators | NanoByte SAT Solver </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Building formulas with operators | NanoByte SAT Solver ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nano-byte/sat-solver/blob/0.5.1/doc/formulas.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="building-formulas-with-operators">Building formulas with operators</h1>
+
+<p>In addition to feeding clauses directly to a <a class="xref" href="api/NanoByte.SatSolver.SatProblem-1.html">SatProblem&lt;T&gt;</a>, you can assemble a Boolean expression out of <a class="xref" href="api/NanoByte.SatSolver.Literal-1.html">Literal&lt;T&gt;</a>, <a class="xref" href="api/NanoByte.SatSolver.Clause-1.html">Clause&lt;T&gt;</a> and <a class="xref" href="api/NanoByte.SatSolver.Formula-1.html">Formula&lt;T&gt;</a> objects and pass it to the solver in one go. This is useful when the constraints come from another layer (e.g. a parser or a domain model) that wants to hand the solver a complete CNF expression.</p>
+<h2 id="literals">Literals</h2>
+<p>A literal is a variable identity plus a negation flag. Any value that implements <code>IEquatable&lt;T&gt;</code> can be wrapped in a literal:</p>
+<pre><code class="lang-csharp">var a = Literal.Of(&quot;a&quot;);
+var b = Literal.Of(&quot;b&quot;);
+var notA = !a;            // negation
+</code></pre>
+<p>Any <code>T</code> is also implicitly convertible to <code>Literal&lt;T&gt;</code>, so you can usually just write the underlying value:</p>
+<pre><code class="lang-csharp">Literal&lt;string&gt; a = &quot;a&quot;;
+</code></pre>
+<h2 id="clauses">Clauses</h2>
+<p>A <a class="xref" href="api/NanoByte.SatSolver.Clause-1.html">Clause&lt;T&gt;</a> is a disjunction of literals (at least one must be true). Use the <code>|</code> operator to combine literals into a clause:</p>
+<pre><code class="lang-csharp">Clause&lt;string&gt; clause = a | b | !c;       // a ∨ b ∨ ¬c
+</code></pre>
+<p>A single literal is implicitly convertible to a unit clause:</p>
+<pre><code class="lang-csharp">Clause&lt;string&gt; fact = a;                   // {a}
+</code></pre>
+<h2 id="formulas">Formulas</h2>
+<p>A <a class="xref" href="api/NanoByte.SatSolver.Formula-1.html">Formula&lt;T&gt;</a> is a conjunction of clauses (all must be true), i.e. a CNF expression. Use the <code>&amp;</code> operator to combine clauses into a formula:</p>
+<pre><code class="lang-csharp">Formula&lt;string&gt; formula = (a | b) &amp; (!a | c) &amp; (!c | d) &amp; a;
+</code></pre>
+<h2 id="handing-a-formula-to-the-solver">Handing a formula to the solver</h2>
+<p><code>SatProblem&lt;T&gt;</code> accepts a <code>Formula&lt;T&gt;</code> via either <a class="xref" href="api/NanoByte.SatSolver.SatProblem-1.html#NanoByte_SatSolver_SatProblem_1_AddFormula_">AddFormula</a> or the <code>+=</code> operator:</p>
+<pre><code class="lang-csharp">var problem = new SatProblem&lt;string&gt;();
+problem += (a | b) &amp; (!a | c) &amp; (!c | d) &amp; a;
+
+Model&lt;string&gt;? model = problem.Solve();
+</code></pre>
+<p>You do not need to call <code>AddVariable</code> first; any literal referenced in the formula will be registered on first use.</p>
+<h2 id="inspecting-and-simplifying-a-formula">Inspecting and simplifying a formula</h2>
+<p><code>Formula&lt;T&gt;</code> is a <code>HashSet&lt;Clause&lt;T&gt;&gt;</code>, so the usual set operations work. It also exposes a few helpers:</p>
+<ul>
+<li><a class="xref" href="api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_ContainsEmptyClause">ContainsEmptyClause</a>: <code>true</code> if any clause is empty, in which case the formula is trivially unsatisfiable.</li>
+<li><a class="xref" href="api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_IsConsistent">IsConsistent</a>: <code>true</code> if the formula is a set of non-conflicting unit clauses (i.e. already represents a concrete assignment).</li>
+<li><a class="xref" href="api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetLiterals_">GetLiterals</a>: every literal referenced anywhere in the formula.</li>
+<li><a class="xref" href="api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_GetPureLiterals_">GetPureLiterals</a>: literals that appear with only one polarity. These can always be set true without changing satisfiability.</li>
+<li><a class="xref" href="api/NanoByte.SatSolver.Formula-1.html#NanoByte_SatSolver_Formula_1_Simplify_">Simplify</a>: returns a new formula with unit propagation and pure-literal elimination applied to a fixed point.</li>
+</ul>
+<pre><code class="lang-csharp">Formula&lt;string&gt; simplified = formula.Simplify();
+if (simplified.ContainsEmptyClause)
+{
+    // Unsatisfiable without even invoking the solver.
+}
+</code></pre>
+<p>Simplification is purely a preprocessing convenience; the CDCL engine performs unit propagation internally during the search.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nano-byte/sat-solver/blob/0.5.1/doc/formulas.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright Bastian Eicher
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
