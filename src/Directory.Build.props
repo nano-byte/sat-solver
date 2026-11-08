@@ -24,6 +24,7 @@
     <Authors>Bastian Eicher</Authors>
     <Copyright>Copyright Bastian Eicher</Copyright>
     <RepositoryUrl>https://github.com/nano-byte/sat-solver</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/nano-byte/sat-solver/releases/tag/$(Version)</PackageReleaseNotes>
     <PackageProjectUrl>https://sat-solver.nano-byte.net/</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
