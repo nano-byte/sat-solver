@@ -53,16 +53,6 @@ public sealed class AtMostOneConstraint<T>
         return null;
     }
 
-    internal Lit<T>? BestUndecidedInternal()
-    {
-        if (SelectedInternal() != null) return null;
-        foreach (var lit in _literals)
-        {
-            if (lit.Value == null) return lit;
-        }
-        return null;
-    }
-
     /// <summary>Registers a per-literal adapter on each variable's watch list so the engine notifies us whenever any literal becomes <c>true</c>.</summary>
     internal void RegisterWatches()
     {
