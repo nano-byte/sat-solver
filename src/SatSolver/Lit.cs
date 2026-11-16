@@ -8,17 +8,11 @@ namespace NanoByte.SatSolver;
 /// <summary>
 /// Pairing of a <see cref="Variable{T}"/> with a negation flag.
 /// </summary>
-internal readonly struct Lit<T> : IEquatable<Lit<T>>
+internal readonly struct Lit<T>(Variable<T> variable, bool negated) : IEquatable<Lit<T>>
     where T : IEquatable<T>
 {
-    public readonly Variable<T> Variable;
-    public readonly bool Negated;
-
-    public Lit(Variable<T> variable, bool negated)
-    {
-        Variable = variable;
-        Negated = negated;
-    }
+    public readonly Variable<T> Variable = variable;
+    public readonly bool Negated = negated;
 
     /// <summary>Returns the negation of this literal.</summary>
     public Lit<T> Negate() => new(Variable, !Negated);
